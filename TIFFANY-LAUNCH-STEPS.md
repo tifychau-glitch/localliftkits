@@ -15,7 +15,7 @@ Applied values:
 
 - Buttondown username: `localliftkits`
 - GoatCounter site code: `localliftkits`
-- Gumroad checkout URL: applied in the landing page
+- Gumroad checkout URL: `https://localliftstudio.gumroad.com/l/qkpxfz`
 
 Do not paste passwords, tokens, recovery codes, payment information, private API keys, or secret account details into this file.
 
