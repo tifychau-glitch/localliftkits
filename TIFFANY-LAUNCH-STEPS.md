@@ -1,6 +1,6 @@
 # Tiffany Launch Status - Local Lift Studio
 
-Last updated: Landing page deployed and live smoke test partially completed.
+Last updated: Account-side launch checks working; 14-day observation window started 2026-05-05 17:47 EDT.
 
 ## Public brand
 
@@ -60,14 +60,18 @@ Completed by Nori:
 8. Lead magnet PDF URL returns HTTP 200 with `application/pdf`.
 9. Preview/cover assets return HTTP 200.
 
-Still needs Tiffany/account-dashboard confirmation:
+Tiffany/account-dashboard confirmation:
 
-1. Open the live page on mobile.
-2. Submit the Buttondown email form with a test email.
-3. Confirm the email appears in Buttondown.
-4. Confirm the welcome/email flow arrives if Buttondown is configured to send one.
-5. Confirm GoatCounter receives the live visit in the dashboard.
-6. Once confirmed, start the 14-day observation window.
+1. Live page mobile check: working/seems OK.
+2. Buttondown hosted signup: working.
+3. Buttondown dashboard recording: working/seems OK.
+4. GoatCounter dashboard recording: working/seems OK.
+5. 14-day observation window started 2026-05-05 17:47 EDT.
+
+Nori traffic asset added after launch checks:
+
+- Free tool page: `review-request-generator.html`
+- Purpose: capture search traffic for med spa review request templates without changing the core paid offer.
 
 ## 14-day observation rule
 
