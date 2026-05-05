@@ -1,6 +1,6 @@
 # Tiffany Launch Status - Local Lift Studio
 
-Last updated: Values applied and pre-publish fixes completed.
+Last updated: Landing page deployed and live smoke test partially completed.
 
 ## Public brand
 
@@ -35,18 +35,39 @@ Important files:
 - `assets/preview-3-review-tracker.png` - Review Tracker preview
 - `Free Lead Magnet/5 Policy-Safe Google Review Reply Templates.pdf` - branded lead magnet PDF
 
-## Remaining launch steps
+## Live landing page
 
-1. Deploy the `landing-page-deploy/` folder as the site root.
-2. Open the deployed page on desktop and mobile.
-3. Confirm all images load.
-4. Submit the Buttondown email form with a test email.
-5. Confirm the thank-you page opens.
-6. Download the free PDF from the thank-you page.
-7. Confirm the welcome/email flow arrives if Buttondown is configured to send one.
-8. Click the Buy button and confirm Gumroad checkout opens.
-9. Confirm GoatCounter receives a test visit in the dashboard.
-10. Once live and verified, start the 14-day observation window.
+Public URL:
+
+`https://tifychau-glitch.github.io/localliftkits/`
+
+GitHub Pages source:
+
+- Branch: `main`
+- Folder: `/docs`
+
+## Launch smoke test status
+
+Completed by Nori:
+
+1. GitHub repo confirmed public.
+2. GitHub Pages enabled from `main` / `/docs`.
+3. Live landing page returned HTTP 200.
+4. Live page title, Gumroad URL, GoatCounter URL, Buttondown form, and placeholder checks passed.
+5. Live visual QA passed: assets loaded, no broken images, no visible placeholders, layout looked polished.
+6. Final Buy button opened the correct Gumroad checkout URL.
+7. Thank-you page loads live.
+8. Lead magnet PDF URL returns HTTP 200 with `application/pdf`.
+9. Preview/cover assets return HTTP 200.
+
+Still needs Tiffany/account-dashboard confirmation:
+
+1. Open the live page on mobile.
+2. Submit the Buttondown email form with a test email.
+3. Confirm the email appears in Buttondown.
+4. Confirm the welcome/email flow arrives if Buttondown is configured to send one.
+5. Confirm GoatCounter receives the live visit in the dashboard.
+6. Once confirmed, start the 14-day observation window.
 
 ## 14-day observation rule
 
