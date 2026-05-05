@@ -1,0 +1,21 @@
+# Sellable customer product files - do not publish in the website repo
+Google-Reviews-Growth-Kit-for-Med-Spas-v1.zip
+Local-Business-Review-Growth-Kit-v1.zip
+local-business-review-growth-kit-v1/
+
+# Product generator/source scripts that can recreate paid product contents
+build_review_kit.py
+polish_review_kit_v2.py
+refresh_csv_and_rebuild.py
+
+# Local/system noise
+.DS_Store
+__pycache__/
+*.pyc
+excalidraw.log
+
+# Secrets / env files
+.env
+*.env
+*.key
+*.pem
