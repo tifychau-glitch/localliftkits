@@ -1,119 +1,68 @@
-# Tiffany Launch Steps - Local Lift Studio
+# Tiffany Launch Status - Local Lift Studio
 
-Status: Gumroad account created. Buttondown account created. Nice. We are close.
+Last updated: Values applied and pre-publish fixes completed.
 
-## What Nori needs from Tiffany
+## Public brand
 
-Please send these values only after you have them:
+Brand name: Local Lift Studio
+Product: Google Reviews Growth Kit for Med Spas
 
-```text
-BUTTONDOWN_USERNAME=localliftkits
-GUMROAD_CHECKOUT_URL=https://lifted16.gumroad.com/l/qkpxfz?_gl=1*xd9w6w*_ga*MzQ4OTg3ODYxLjE3NzU1NjkyMDM.*_ga_6LJN6D94N6*czE3Nzc5ODc2NDMkbzUkZzAkdDE3Nzc5ODc2NDMkajYwJGwwJGgw
-GOATCOUNTER_CODE=localiftkits
-```
+## Launch values status
 
-Do not send passwords, recovery codes, API keys, payment info, or private tokens.
+The public launch values have already been saved and applied to the deploy-ready landing page.
 
-## Step 1 - Buttondown
+Applied values:
 
-Find your Buttondown username/publication slug.
+- Buttondown username: `localliftkits`
+- GoatCounter site code: `localliftkits`
+- Gumroad checkout URL: applied in the landing page
 
-Usually the form action will become something like:
+Do not paste passwords, tokens, recovery codes, payment information, private API keys, or secret account details into this file.
 
-```text
-https://buttondown.email/YOUR_USERNAME
-```
+## Current deploy-ready folder
 
-Send only the public username/slug, not your password.
+Use this folder as the website root:
 
-Example:
+`/Users/tiffanychau/nori-money-project/landing-page-deploy`
 
-```text
-BUTTONDOWN_USERNAME=localliftkits
-```
+Important files:
 
-## Step 2 - Gumroad
+- `index.html` - main landing page
+- `thank-you.html` - email signup download page
+- `assets/cover.png` - product cover image
+- `assets/preview-1-dashboard.png` - dashboard preview
+- `assets/preview-2-copy-builder.png` - Copy Builder preview
+- `assets/preview-3-review-tracker.png` - Review Tracker preview
+- `Free Lead Magnet/5 Policy-Safe Google Review Reply Templates.pdf` - branded lead magnet PDF
 
-Create the product/listing using the final buyer ZIP:
+## Remaining launch steps
 
-```text
-/Users/tiffanychau/nori-money-project/Google-Reviews-Growth-Kit-for-Med-Spas-v1.zip
-```
+1. Deploy the `landing-page-deploy/` folder as the site root.
+2. Open the deployed page on desktop and mobile.
+3. Confirm all images load.
+4. Submit the Buttondown email form with a test email.
+5. Confirm the thank-you page opens.
+6. Download the free PDF from the thank-you page.
+7. Confirm the welcome/email flow arrives if Buttondown is configured to send one.
+8. Click the Buy button and confirm Gumroad checkout opens.
+9. Confirm GoatCounter receives a test visit in the dashboard.
+10. Once live and verified, start the 14-day observation window.
 
-Use these seller assets:
+## 14-day observation rule
 
-```text
-/Users/tiffanychau/nori-money-project/local-business-review-growth-kit-v1/Seller Assets/Product Listing Copy.md
-/Users/tiffanychau/nori-money-project/local-business-review-growth-kit-v1/assets/cover.png
-/Users/tiffanychau/nori-money-project/local-business-review-growth-kit-v1/assets/preview-1-dashboard.png
-/Users/tiffanychau/nori-money-project/local-business-review-growth-kit-v1/assets/preview-2-copy-builder.png
-/Users/tiffanychau/nori-money-project/local-business-review-growth-kit-v1/assets/preview-3-review-tracker.png
-```
+After launch, do not change the offer, price, headline, main copy, preview order, or core positioning for 14 days unless fixing a true bug such as:
 
-Price:
+- broken checkout link
+- broken email signup
+- broken lead magnet download
+- broken image
+- broken analytics
+- typo that damages trust
 
-```text
-$29
-```
+Reason: analytics only mean something if the page stays stable long enough to measure.
 
-After Gumroad gives you the public product/checkout URL, send it like:
+## Final upload file for Gumroad
 
-```text
-GUMROAD_CHECKOUT_URL=https://...
-```
+Upload this paid customer ZIP to Gumroad:
 
-## Step 3 - GoatCounter
-
-Create a free GoatCounter site and send the public site code/subdomain.
-
-Example:
-
-```text
-GOATCOUNTER_CODE=locallift
-```
-
-Do not send passwords or private account settings.
-
-## Step 4 - Nori applies launch values
-
-Once you send the three values, Nori will run:
-
-```text
-/Users/tiffanychau/nori-money-project/apply_launch_values.py
-```
-
-That script will:
-
-- replace `YOUR_BUTTONDOWN_USERNAME`
-- replace `YOUR_GOATCOUNTER_CODE`
-- replace `CHECKOUT_LINK_GOES_HERE`
-- check that no launch placeholders remain
-- verify deploy asset paths still use `assets/...`
-
-## Step 5 - Deploy
-
-Only deploy this folder after placeholders are replaced:
-
-```text
-/Users/tiffanychau/nori-money-project/landing-page-deploy
-```
-
-Do not deploy this source template directly:
-
-```text
-/Users/tiffanychau/nori-money-project/local-business-review-growth-kit-v1/Seller Assets/landing-page-template-NEEDS-SETUP.html
-```
-
-## Step 6 - First 14 days after launch
-
-Do not change:
-
-- offer
-- price
-- headline
-- main copy
-- preview order
-
-Only fix real bugs like broken links, broken images, checkout failure, analytics failure, or email capture failure.
-
-Reason: GoatCounter data is only useful if the page holds still long enough to measure.
+`/Users/tiffanychau/nori-money-project/Google-Reviews-Growth-Kit-for-Med-Spas-v1.zip`
