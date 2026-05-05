@@ -177,6 +177,8 @@
     form { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
     input[type=email] { flex: 1 1 260px; min-height: 48px; padding: 0 16px; border:1px solid var(--line); border-radius:999px; background: rgba(255,255,255,.82); color:var(--ink); font-size:16px; outline: none; }
     input[type=email]:focus { box-shadow: 0 0 0 4px rgba(244,114,182,.18); border-color: rgba(244,114,182,.55); }
+    .form-help { flex-basis:100%; margin:8px 0 0; font-size:14px; color:var(--muted); }
+    .form-help a { color:var(--plum); font-weight:850; text-decoration-thickness:2px; text-underline-offset:3px; }
     ul.clean { padding:0; margin:18px 0 0; list-style:none; display:grid; gap:10px; }
     ul.clean li { display:flex; gap:10px; color:var(--muted); font-size:16px; line-height:1.5; }
     ul.clean li::before { content:""; flex:0 0 8px; width:8px; height:8px; margin-top:9px; border-radius:50%; background: linear-gradient(135deg, var(--rose), var(--violet)); }
@@ -288,10 +290,10 @@
           <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Free lead magnet</span>
           <h2>Get 5 policy-safe Google review reply templates.</h2>
           <p>Use the free templates now. Upgrade to the full workflow when you want the tracker, Copy Builder, dashboard, and complete med spa system.</p>
-          <form action="https://buttondown.email/api/emails/embed-subscribe/localliftkits" method="post" target="popupwindow">
+          <form action="https://buttondown.email/api/emails/embed-subscribe/localliftkits" method="post">
             <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-            <input type="hidden" name="tag" value="review-kit-lead-magnet">
-            <button type="submit">Send me the templates</button>
+            <button type="submit">Subscribe for the templates</button>
+            <p class="form-help">If Buttondown has a moment, <a href="thank-you.html">download the free PDF here</a>.</p>
           </form>
         </div>
         <div class="card">
