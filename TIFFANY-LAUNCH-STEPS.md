@@ -7,9 +7,9 @@ Status: Gumroad account created. Buttondown account created. Nice. We are close.
 Please send these values only after you have them:
 
 ```text
-BUTTONDOWN_USERNAME=
-GUMROAD_CHECKOUT_URL=
-GOATCOUNTER_CODE=
+BUTTONDOWN_USERNAME=localliftkits
+GUMROAD_CHECKOUT_URL=https://lifted16.gumroad.com/l/qkpxfz?_gl=1*xd9w6w*_ga*MzQ4OTg3ODYxLjE3NzU1NjkyMDM.*_ga_6LJN6D94N6*czE3Nzc5ODc2NDMkbzUkZzAkdDE3Nzc5ODc2NDMkajYwJGwwJGgw
+GOATCOUNTER_CODE=localiftkits
 ```
 
 Do not send passwords, recovery codes, API keys, payment info, or private tokens.
