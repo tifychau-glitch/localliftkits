@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tifychau-glitch.github.io/localliftkits/sitemap.xml
