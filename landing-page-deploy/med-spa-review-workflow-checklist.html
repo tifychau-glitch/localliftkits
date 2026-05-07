@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Med Spa Review Workflow Checklist | Weekly Google Review System</title>
+  <meta name="description" content="A simple weekly Google review workflow checklist for med spas: request timing, front-desk follow-up, reply habits, and policy-safe review tracking.">
+  <link rel="canonical" href="https://tifychau-glitch.github.io/localliftkits/med-spa-review-workflow-checklist.html">
+  <meta property="og:title" content="Med Spa Review Workflow Checklist">
+  <meta property="og:description" content="A policy-safe weekly checklist for requesting, tracking, and replying to Google reviews at a med spa.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="assets/preview-1-dashboard.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      --ink: #18211f;
+      --muted: #62716b;
+      --sage: #8ea99b;
+      --mint: #dcebe4;
+      --blush: #f4ddd8;
+      --cream: #fbf7ef;
+      --card: rgba(255,255,255,.80);
+      --line: rgba(24,33,31,.12);
+      --shadow: 0 24px 70px rgba(36,54,49,.14);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 6%, rgba(244,221,216,.9), transparent 32%),
+        radial-gradient(circle at 92% 10%, rgba(220,235,228,.95), transparent 34%),
+        linear-gradient(135deg, #fbf7ef 0%, #f8eee7 48%, #eef7f1 100%);
+      min-height: 100vh;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 22px 56px; }
+    nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 46px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 850; text-decoration: none; }
+    .mark { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--sage), #d9b7af); box-shadow: inset 0 0 0 7px rgba(255,255,255,.45); }
+    .navlinks { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .button, .navlinks a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; background: rgba(255,255,255,.62); font-weight: 750; font-size: 14px; }
+    .button.primary { background: #1c2b27; color: #fff; border-color: #1c2b27; box-shadow: 0 16px 34px rgba(28,43,39,.18); }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr); gap: 34px; align-items: center; margin-bottom: 34px; }
+    .eyebrow { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,.65); border: 1px solid var(--line); color: #43564f; font-weight: 800; font-size: 13px; }
+    h1 { font-size: clamp(40px, 6vw, 72px); line-height: .94; letter-spacing: -.06em; margin: 20px 0 16px; }
+    .lead { font-size: 20px; line-height: 1.55; color: var(--muted); max-width: 720px; }
+    .hero-card, article, aside { background: var(--card); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow); backdrop-filter: blur(14px); }
+    .hero-card { padding: 18px; }
+    .hero-card img { display: block; width: 100%; border-radius: 18px; border: 1px solid var(--line); }
+    .hero-card p { margin: 12px 4px 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .content { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 22px; align-items: start; }
+    article { padding: 28px; }
+    aside { padding: 20px; position: sticky; top: 18px; }
+    h2 { font-size: 30px; line-height: 1.08; letter-spacing: -.035em; margin: 34px 0 12px; }
+    h3 { font-size: 21px; margin: 24px 0 8px; }
+    p, li { color: var(--muted); font-size: 17px; line-height: 1.65; }
+    ul, ol { padding-left: 22px; }
+    .checklist { display: grid; gap: 12px; margin: 18px 0; }
+    .step { padding: 18px; border-radius: 18px; border: 1px solid var(--line); background: rgba(255,255,255,.72); }
+    .step strong { display: block; color: #243631; font-size: 18px; margin-bottom: 6px; }
+    .script { margin: 14px 0; padding: 18px; border-radius: 18px; border: 1px solid var(--line); background: rgba(255,255,255,.72); color: #33423e; line-height: 1.58; white-space: pre-wrap; }
+    .cta { display: grid; gap: 12px; margin: 24px 0; padding: 20px; border-radius: 22px; background: rgba(220,235,228,.62); border: 1px solid rgba(142,169,155,.38); }
+    .cta strong { font-size: 20px; letter-spacing: -.025em; }
+    .note { padding: 16px; border-radius: 18px; background: rgba(244,221,216,.45); border: 1px solid rgba(217,183,175,.45); color: #4a5d57; line-height: 1.55; }
+    .side-list { display: grid; gap: 10px; margin-top: 14px; }
+    .side-list a { display: block; text-decoration: none; border: 1px solid var(--line); border-radius: 16px; padding: 12px; background: rgba(255,255,255,.64); font-weight: 750; color: #253530; }
+    footer { color: var(--muted); font-size: 13px; margin-top: 44px; text-align: center; }
+    @media (max-width: 860px) {
+      nav { align-items: flex-start; flex-direction: column; }
+      .hero, .content { grid-template-columns: 1fr; }
+      aside { position: static; }
+      h1 { font-size: 42px; }
+      article { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Local Lift Studio home"><span class="mark"></span><span>Local Lift Studio</span></a>
+      <div class="navlinks">
+        <a href="review-request-generator.html">Free generator</a>
+        <a href="med-spa-review-request-templates.html">Request templates</a>
+        <a href="google-review-reply-templates-med-spas.html">Reply templates</a>
+        <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">Get the $29 kit</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Med spa reputation workflow - Weekly checklist</span>
+          <h1>Med spa review workflow checklist.</h1>
+          <p class="lead">A simple weekly system for requesting, tracking, and replying to Google reviews without turning the front desk into a spreadsheet detective agency.</p>
+        </div>
+        <div class="hero-card">
+          <img src="assets/preview-1-dashboard.png" alt="Preview of the Google Reviews Growth Kit dashboard for med spas">
+          <p>The full kit includes a tracker, dashboard, copy builder, templates, prompts, and SOP so this workflow can run the same way every week.</p>
+        </div>
+      </section>
+
+      <div class="content">
+        <article>
+          <p>Most med spas do not need a complicated review system. They need a repeatable habit: know who to ask, ask at the right moment, follow up politely, and reply without exposing private client details.</p>
+          <p>This checklist is built for owners, managers, and front-desk teams who want a clean Google review routine that fits into a busy week.</p>
+
+          <div class="note"><strong>Policy-safe reminder:</strong> ask real clients for honest feedback. Do not review gate, pre-screen for happy clients only, pressure clients, offer incentives for reviews, or ask for a specific star rating.</div>
+
+          <h2>The 30-Minute Weekly Review Workflow</h2>
+          <div class="checklist">
+            <div class="step"><strong>1. Pull last week’s completed appointments.</strong> Look for clients who had a normal completed visit and are appropriate to contact under your communication policies.</div>
+            <div class="step"><strong>2. Mark the request channel.</strong> Choose SMS, email, or phone follow-up based on the client’s allowed contact preferences and what your team already uses.</div>
+            <div class="step"><strong>3. Send one honest-feedback request.</strong> Keep the message short. Thank them for visiting, ask for honest feedback, and include the direct Google review link.</div>
+            <div class="step"><strong>4. Schedule one gentle follow-up.</strong> If your policy allows it, follow up once after a few days. Skip repeated nudges. Nobody books injectables because a brand became a notification goblin.</div>
+            <div class="step"><strong>5. Reply to new reviews.</strong> Thank positive reviewers, stay calm with concerns, and avoid confirming treatment details in public replies.</div>
+            <div class="step"><strong>6. Record what happened.</strong> Track who was asked, when, channel used, review status, reply status, and next action so nothing lives only in someone’s memory.</div>
+          </div>
+
+          <h2>Simple Weekly Tracker Columns</h2>
+          <p>If you are building this in a spreadsheet, start with these columns:</p>
+          <ul>
+            <li>Client first name or internal initials</li>
+            <li>Visit date</li>
+            <li>Service category, kept broad</li>
+            <li>Request channel: SMS, email, phone, or none</li>
+            <li>Request sent date</li>
+            <li>Follow-up date</li>
+            <li>Review status: not requested, requested, reviewed, no response</li>
+            <li>Reply status: not needed, needs reply, replied</li>
+            <li>Next action owner</li>
+          </ul>
+
+          <h2>Copy-And-Paste Review Request</h2>
+          <p>Use this as a starting point, then adjust the tone for your med spa.</p>
+          <div class="script">Hi [First Name], thank you for visiting [Med Spa Name]. If you have a minute, we would be grateful for your honest feedback on Google: [Review Link]
+
+Your review helps local clients learn more about our team. Thank you again.</div>
+          <p>Want a faster version? Use the free generator to build SMS and email options with your med spa name, tone, and review link.</p>
+          <p><a class="button" href="review-request-generator.html">Open the free review request generator</a></p>
+
+          <h2>What To Avoid</h2>
+          <ul>
+            <li>Do not ask only visibly happy clients for public reviews.</li>
+            <li>Do not route unhappy clients to private feedback while routing happy clients to Google.</li>
+            <li>Do not offer discounts, loyalty points, free treatments, giveaways, or perks for reviews.</li>
+            <li>Do not ask staff to write reviews or ask clients for specific wording.</li>
+            <li>Do not mention protected or sensitive treatment details in public replies.</li>
+          </ul>
+
+          <h2>Front Desk Version</h2>
+          <p>For a front-desk handoff, keep the habit tiny:</p>
+          <ol>
+            <li>Every Monday, open last week’s completed visits.</li>
+            <li>Send approved review request messages to eligible clients.</li>
+            <li>Every Thursday, check for new reviews and mark reply status.</li>
+            <li>Reply using approved templates or escalate sensitive reviews to the manager.</li>
+            <li>Update the tracker before closing the loop.</li>
+          </ol>
+
+          <div class="cta">
+            <strong>Want the full workflow already built?</strong>
+            <span>The Google Reviews Growth Kit for Med Spas includes the tracker, dashboard, copy builder, templates, AI prompts, quickstart guide, and weekly SOP.</span>
+            <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">Get the $29 kit</a>
+            <a class="button" href="Free%20Lead%20Magnet/5%20Policy-Safe%20Google%20Review%20Reply%20Templates.pdf">Download the free reply templates PDF</a>
+          </div>
+
+          <h2>Related Free Resources</h2>
+          <p><a class="button" href="med-spa-review-request-templates.html">Read request templates</a> <a class="button" href="google-review-reply-templates-med-spas.html">Read reply templates</a></p>
+
+          <h2>Final Reminder</h2>
+          <p>The best review workflow is boring in the best way: consistent, honest, privacy-aware, and easy enough that the team actually uses it.</p>
+        </article>
+
+        <aside>
+          <strong>Resources</strong>
+          <div class="side-list">
+            <a href="review-request-generator.html">Free review request generator</a>
+            <a href="med-spa-review-request-templates.html">Review request SMS + email templates</a>
+            <a href="google-review-reply-templates-med-spas.html">Google review reply templates</a>
+            <a href="Free%20Lead%20Magnet/5%20Policy-Safe%20Google%20Review%20Reply%20Templates.pdf">Free reply templates PDF</a>
+            <a href="index.html">Google Reviews Growth Kit landing page</a>
+            <a href="https://localliftstudio.gumroad.com/l/qkpxfz">Get the full kit on Gumroad</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>Local Lift Studio - Built for consistent, honest review requests and replies.</footer>
+  </div>
+  <script data-goatcounter="https://localliftkits.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
