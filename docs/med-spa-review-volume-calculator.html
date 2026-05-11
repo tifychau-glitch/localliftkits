@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Review Volume Calculator for Med Spas (Project 90/180/365 Day Counts)</title>
+  <meta name="description" content="Free calculator. Input your current Google review count, monthly patients, and how often you ask. See projected review counts at 90, 180, and 365 days.">
+  <link rel="canonical" href="https://tifychau-glitch.github.io/localliftkits/med-spa-review-volume-calculator.html">
+  <meta property="og:title" content="Free Review Volume Calculator for Med Spas">
+  <meta property="og:description" content="Project your Google review count out 90, 180, and 365 days. No signup. Built for med spas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tifychau-glitch.github.io/localliftkits/assets/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Med Spa Review Volume Calculator",
+    "description": "Calculator that projects Google review volume for med spas based on current count, monthly patients, ask rate, and conversion rate.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "publisher": {"@type": "Organization", "name": "Local Lift Studio"}
+  }
+  </script>
+  <style>
+    :root { --ink:#18211f; --muted:#62716b; --sage:#8ea99b; --mint:#dcebe4; --blush:#f4ddd8; --cream:#fbf7ef; --card:rgba(255,255,255,.80); --line:rgba(24,33,31,.12); --shadow:0 24px 70px rgba(36,54,49,.14); }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 8% 6%, rgba(244,221,216,.9), transparent 32%),radial-gradient(circle at 92% 10%, rgba(220,235,228,.95), transparent 34%),linear-gradient(135deg,#fbf7ef 0%,#f8eee7 48%,#eef7f1 100%);min-height:100vh}
+    a{color:inherit}
+    .wrap{max-width:960px;margin:0 auto;padding:28px 22px 56px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:46px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:850;text-decoration:none}
+    .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--sage),#d9b7af);box-shadow:inset 0 0 0 7px rgba(255,255,255,.45)}
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .button,.navlinks a{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:rgba(255,255,255,.62);font-weight:750;font-size:14px}
+    .button.primary{background:#1c2b27;color:#fff;border-color:#1c2b27;box-shadow:0 16px 34px rgba(28,43,39,.18);cursor:pointer}
+    h1{font-size:clamp(40px,6vw,64px);line-height:.96;letter-spacing:-.05em;margin:18px 0 14px}
+    .lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:720px;margin-bottom:28px}
+    .eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.65);border:1px solid var(--line);color:#43564f;font-weight:800;font-size:13px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:28px;backdrop-filter:blur(14px);margin-bottom:22px}
+    label{display:block;font-weight:800;font-size:14px;color:#253530;margin-bottom:6px;letter-spacing:.01em}
+    .hint{font-size:13px;color:var(--muted);margin-bottom:10px;line-height:1.4}
+    input[type=number]{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.78);font-size:18px;font-weight:700;color:#253530;font-family:inherit}
+    input[type=number]:focus{outline:none;border-color:var(--sage);background:#fff}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:14px}
+    .row.three{grid-template-columns:1fr 1fr 1fr}
+    @media (max-width:680px){.row,.row.three{grid-template-columns:1fr}}
+    .results{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:18px}
+    @media (max-width:680px){.results{grid-template-columns:1fr}}
+    .result{padding:18px;border-radius:18px;background:rgba(220,235,228,.55);border:1px solid rgba(142,169,155,.4);text-align:center}
+    .result .num{font-size:42px;font-weight:850;color:#1c2b27;letter-spacing:-.04em;line-height:1.05}
+    .result .lbl{font-size:13px;text-transform:uppercase;font-weight:800;color:#43564f;letter-spacing:.04em;margin-bottom:4px}
+    .gain{font-size:13px;color:#3a6b4c;margin-top:4px;font-weight:700}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .note{padding:18px;border-radius:18px;background:rgba(244,221,216,.45);border:1px solid rgba(217,183,175,.45);color:#4a5d57;line-height:1.55;font-size:15px}
+    p,li{color:var(--muted);font-size:16px;line-height:1.65}
+    h2{font-size:24px;letter-spacing:-.02em;margin:22px 0 10px}
+    footer{color:var(--muted);font-size:13px;margin-top:36px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand"><span class="mark" aria-hidden="true"></span><span>Local Lift Studio</span></a>
+      <div class="navlinks">
+        <a href="negative-review-reply-generator.html">Reply generator</a>
+        <a href="resources-for-med-spa-owners.html">Resources</a>
+        <a class="button" href="https://localliftstudio.gumroad.com/l/dxppjd">$10 swipe file</a>
+        <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">$29 kit</a>
+      </div>
+    </nav>
+
+    <main>
+      <span class="eyebrow">Free tool - no signup</span>
+      <h1>Review volume calculator.</h1>
+      <p class="lead">Plug in four numbers. See where your Google review count realistically lands in 90, 180, and 365 days. Helpful when you're trying to decide whether asking systematically is actually worth the work.</p>
+
+      <div class="card">
+        <div class="row">
+          <div>
+            <label for="current">Current Google review count</label>
+            <div class="hint">The total number of reviews on your Google Business profile today.</div>
+            <input type="number" id="current" min="0" value="42">
+          </div>
+          <div>
+            <label for="patients">Patients per month</label>
+            <div class="hint">Total visits, repeat included. Estimate is fine.</div>
+            <input type="number" id="patients" min="0" value="120">
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="askrate">Percent of patients you ask for a review</label>
+            <div class="hint">If you ask everyone, put 100. If you ask occasionally, try 40-60.</div>
+            <input type="number" id="askrate" min="0" max="100" value="35">
+          </div>
+          <div>
+            <label for="conversion">Percent of asked patients who actually leave a review</label>
+            <div class="hint">Industry benchmark is 20-35%. Higher if you follow up at 7 days.</div>
+            <input type="number" id="conversion" min="0" max="100" value="22">
+          </div>
+        </div>
+
+        <div class="results">
+          <div class="result">
+            <div class="lbl">90 days</div>
+            <div class="num" id="r90">-</div>
+            <div class="gain" id="g90">-</div>
+          </div>
+          <div class="result">
+            <div class="lbl">180 days</div>
+            <div class="num" id="r180">-</div>
+            <div class="gain" id="g180">-</div>
+          </div>
+          <div class="result">
+            <div class="lbl">365 days</div>
+            <div class="num" id="r365">-</div>
+            <div class="gain" id="g365">-</div>
+          </div>
+        </div>
+
+        <h2>What if you asked every patient instead?</h2>
+        <div class="results">
+          <div class="result">
+            <div class="lbl">90 days</div>
+            <div class="num" id="rmax90">-</div>
+            <div class="gain" id="gmax90">-</div>
+          </div>
+          <div class="result">
+            <div class="lbl">180 days</div>
+            <div class="num" id="rmax180">-</div>
+            <div class="gain" id="gmax180">-</div>
+          </div>
+          <div class="result">
+            <div class="lbl">365 days</div>
+            <div class="num" id="rmax365">-</div>
+            <div class="gain" id="gmax365">-</div>
+          </div>
+        </div>
+
+        <div class="note" style="margin-top:18px">
+          <strong>Reality check on the inputs.</strong> Most spas overestimate their actual ask rate. If you do not have a tracker, the real number is usually under 30 percent because the front desk gets busy and skips. A tracker (and a weekly 30 minute slot to run it) is the single biggest lever.
+        </div>
+
+        <div class="cta">
+          <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">Get the $29 kit with the tracker</a>
+          <a class="button" href="https://localliftstudio.gumroad.com/l/dxppjd">Or just the $10 reply swipe file</a>
+          <a class="button" href="ask-med-spa-patients-for-reviews-without-being-pushy.html">How to ask without being pushy</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>How the math works</h2>
+        <p>Each month you get a number of new reviews equal to: patients per month × ask percent × conversion percent. We add that to your current count for each window. We assume your numbers stay steady. Real life is messier (slow months, seasonal swings), but this gives you a directional read.</p>
+        <p>The "ask every patient" scenario sets ask percent to 100, then keeps your existing conversion rate. It is the ceiling under your current follow-through quality. To raise the ceiling, raise the conversion rate by doing a single 7 day follow-up. See the <a href="ask-med-spa-patients-for-reviews-without-being-pushy.html">request scripts guide</a> for what that follow-up actually says.</p>
+        <h2>What this tool does not do</h2>
+        <ul>
+          <li>It does not account for seasonal slowdowns or staff turnover.</li>
+          <li>It does not predict review removal by Google or by reviewers.</li>
+          <li>It does not predict rating changes. 1 star reviews and 5 star reviews both count as 1 in this volume model.</li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>Local Lift Studio - Free tools for med spa review workflows.</footer>
+  </div>
+
+  <script>
+    function calc(){
+      var cur = Math.max(0, parseInt(document.getElementById('current').value) || 0);
+      var pats = Math.max(0, parseInt(document.getElementById('patients').value) || 0);
+      var ask = Math.max(0, Math.min(100, parseFloat(document.getElementById('askrate').value) || 0));
+      var conv = Math.max(0, Math.min(100, parseFloat(document.getElementById('conversion').value) || 0));
+
+      var monthly = pats * (ask/100) * (conv/100);
+      var monthlyMax = pats * 1.0 * (conv/100);
+
+      function project(months, rate){ return Math.round(cur + (rate * months)); }
+      function gain(end){ return end - cur > 0 ? '+' + (end - cur) + ' new' : '0 new'; }
+
+      var r90 = project(3, monthly), r180 = project(6, monthly), r365 = project(12, monthly);
+      var m90 = project(3, monthlyMax), m180 = project(6, monthlyMax), m365 = project(12, monthlyMax);
+
+      document.getElementById('r90').textContent = r90;
+      document.getElementById('r180').textContent = r180;
+      document.getElementById('r365').textContent = r365;
+      document.getElementById('g90').textContent = gain(r90);
+      document.getElementById('g180').textContent = gain(r180);
+      document.getElementById('g365').textContent = gain(r365);
+
+      document.getElementById('rmax90').textContent = m90;
+      document.getElementById('rmax180').textContent = m180;
+      document.getElementById('rmax365').textContent = m365;
+      document.getElementById('gmax90').textContent = gain(m90);
+      document.getElementById('gmax180').textContent = gain(m180);
+      document.getElementById('gmax365').textContent = gain(m365);
+    }
+    ['current','patients','askrate','conversion'].forEach(function(id){
+      document.getElementById(id).addEventListener('input', calc);
+    });
+    calc();
+  </script>
+</body>
+</html>
