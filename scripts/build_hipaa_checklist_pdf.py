@@ -96,7 +96,7 @@ def main():
         c.setStrokeColor(SAGE)
         c.setLineWidth(1.2)
         c.line(x, y + 4, x + 38, y + 4)
-        y -= 2
+        y -= 10
         # Items
         for item in items:
             c.setFillColor(SAGE)
