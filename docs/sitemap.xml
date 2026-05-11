@@ -2,38 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tifychau-glitch.github.io/localliftkits/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://tifychau-glitch.github.io/localliftkits/review-request-generator.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tifychau-glitch.github.io/localliftkits/negative-review-reply-generator.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tifychau-glitch.github.io/localliftkits/resources-for-med-spa-owners.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tifychau-glitch.github.io/localliftkits/how-to-respond-to-1-star-med-spa-review.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tifychau-glitch.github.io/localliftkits/google-review-reply-examples-med-spa.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tifychau-glitch.github.io/localliftkits/what-to-say-bad-review-med-spa.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tifychau-glitch.github.io/localliftkits/hipaa-compliant-review-reply-med-spa.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tifychau-glitch.github.io/localliftkits/med-spa-review-request-templates.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tifychau-glitch.github.io/localliftkits/google-review-reply-templates-med-spas.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tifychau-glitch.github.io/localliftkits/med-spa-review-workflow-checklist.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tifychau-glitch.github.io/localliftkits/med-spa-review-request-after-treatment.html</loc>
-    <lastmod>2026-05-07</lastmod>
-  </url>
-  <url>
-    <loc>https://tifychau-glitch.github.io/localliftkits/simple-google-review-workflow-for-med-spas.html</loc>
-    <lastmod>2026-05-09</lastmod>
-  </url>
-  <url>
-    <loc>https://tifychau-glitch.github.io/localliftkits/med-spa-review-reply-swipe-file.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tifychau-glitch.github.io/localliftkits/thank-you.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>

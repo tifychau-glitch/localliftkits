@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Negative Review Reply Generator for Med Spas (Privacy-Safe)</title>
+  <meta name="description" content="Generate a calm, privacy-safe reply to a negative Google review for your med spa. Free tool, no login, no AI API. Built for med spa owners and front desks." />
+  <link rel="canonical" href="https://tifychau-glitch.github.io/localliftkits/negative-review-reply-generator.html" />
+  <meta property="og:title" content="Free Negative Review Reply Generator for Med Spas" />
+  <meta property="og:description" content="Generate calm, privacy-safe replies to negative Google reviews in seconds." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tifychau-glitch.github.io/localliftkits/negative-review-reply-generator.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Negative Review Reply Generator for Med Spas",
+    "description": "Free tool that generates calm, privacy-safe Google review replies for med spas. No login required.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }
+  </script>
+  <style>
+    :root { --ink:#18211f; --muted:#62716b; --sage:#8ea99b; --mint:#dcebe4; --blush:#f4ddd8; --cream:#fbf7ef; --card:rgba(255,255,255,.76); --line:rgba(24,33,31,.12); --shadow:0 24px 70px rgba(36,54,49,.14); }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 8% 6%, rgba(244,221,216,.9), transparent 32%),radial-gradient(circle at 92% 10%, rgba(220,235,228,.95), transparent 34%),linear-gradient(135deg,#fbf7ef 0%,#f8eee7 48%,#eef7f1 100%);min-height:100vh}
+    a{color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px 22px 56px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:40px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;text-decoration:none}
+    .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--sage),#d9b7af);box-shadow:inset 0 0 0 7px rgba(255,255,255,.45)}
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .navlinks a,.button{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:rgba(255,255,255,.56);font-weight:700;font-size:14px}
+    .button.primary{background:#1c2b27;color:#fff;border-color:#1c2b27;box-shadow:0 16px 34px rgba(28,43,39,.18)}
+    .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:34px;align-items:start}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.65);border:1px solid var(--line);color:#43564f;font-weight:800;font-size:13px}
+    h1{font-size:clamp(38px,6vw,72px);line-height:.93;letter-spacing:-.07em;margin:22px 0 18px;max-width:820px}
+    .lead{font-size:20px;line-height:1.55;color:var(--muted);max-width:680px;margin-bottom:24px}
+    .note{color:var(--muted);font-size:14px;line-height:1.5}
+    .panel,.output,.callout{background:var(--card);border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);backdrop-filter:blur(14px)}
+    .panel{padding:24px}
+    label{display:block;font-weight:800;margin:16px 0 7px}
+    input,select,textarea{width:100%;border:1px solid rgba(24,33,31,.16);border-radius:16px;padding:13px 14px;font:inherit;background:rgba(255,255,255,.78);color:var(--ink);outline:none}
+    textarea{min-height:96px;resize:vertical}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    button{cursor:pointer;border:0;border-radius:999px;padding:13px 18px;font-weight:850;font:inherit}
+    button.main{background:#1c2b27;color:#fff;box-shadow:0 18px 38px rgba(28,43,39,.18)}
+    button.secondary{background:rgba(255,255,255,.72);border:1px solid var(--line);color:var(--ink)}
+    .output{margin-top:24px;padding:22px}
+    .output h2{margin:0 0 14px;font-size:24px;letter-spacing:-.035em}
+    .message{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:20px;padding:16px;white-space:pre-wrap;line-height:1.55;margin-bottom:14px}
+    .message-title{font-weight:900;margin:18px 0 8px}
+    .callout{margin-top:26px;padding:22px;display:grid;gap:12px}
+    .callout strong{font-size:20px;letter-spacing:-.03em}
+    .small{font-size:13px;color:var(--muted);line-height:1.5}
+    .policy{margin-top:22px;padding:16px;border-radius:22px;background:rgba(220,235,228,.6);border:1px solid rgba(142,169,155,.35);color:#40564f;line-height:1.55}
+    .warn{margin-top:14px;padding:14px 16px;border-radius:18px;background:rgba(244,221,216,.55);border:1px solid rgba(217,183,175,.55);color:#5a3a32;font-size:14px;line-height:1.5}
+    footer{color:var(--muted);font-size:13px;margin-top:44px;text-align:center}
+    @media (max-width:850px){.hero,.grid2{grid-template-columns:1fr}nav{align-items:flex-start;flex-direction:column}h1{font-size:42px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Local Lift Studio home"><span class="mark"></span><span>Local Lift Studio</span></a>
+      <div class="navlinks">
+        <a href="review-request-generator.html">Request generator</a>
+        <a href="google-review-reply-templates-med-spas.html">Reply templates</a>
+        <a class="button" href="https://localliftstudio.gumroad.com/l/dxppjd">$10 swipe file</a>
+        <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">$29 kit</a>
+      </div>
+    </nav>
+
+    <main class="hero">
+      <section>
+        <span class="eyebrow">Free med spa tool - Privacy-safe wording</span>
+        <h1>Negative review reply generator for med spas.</h1>
+        <p class="lead">Paste the review, pick the complaint type, and get a calm, privacy-safe reply you can post on Google. No login, no API key, no review gating.</p>
+        <p class="note">Runs entirely in your browser. Nothing is sent anywhere.</p>
+        <div class="policy">
+          <strong>Privacy reminder:</strong> never confirm a treatment, diagnosis, or appointment detail in a public reply. Move details to a private channel.
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Reply generator form">
+        <div class="grid2">
+          <div>
+            <label for="spaName">Med spa name</label>
+            <input id="spaName" value="Glow Aesthetics" />
+          </div>
+          <div>
+            <label for="contact">Phone or email for private contact</label>
+            <input id="contact" value="(555) 123-4567" />
+          </div>
+        </div>
+        <div class="grid2">
+          <div>
+            <label for="reviewerName">Reviewer first name (optional)</label>
+            <input id="reviewerName" placeholder="Jamie" />
+          </div>
+          <div>
+            <label for="category">Complaint type</label>
+            <select id="category">
+              <option value="result">Unhappy with result</option>
+              <option value="cost">Cost or pricing</option>
+              <option value="wait">Wait time or scheduling</option>
+              <option value="staff">Staff tone</option>
+              <option value="rushed">Felt rushed</option>
+              <option value="hygiene">Hygiene or safety</option>
+              <option value="refund">Refund or billing</option>
+              <option value="vague">Vague or emotional</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid2">
+          <div>
+            <label for="tone">Tone</label>
+            <select id="tone">
+              <option value="warm">Warm and human</option>
+              <option value="clinical">Calm and clinical</option>
+              <option value="brief">Brief and professional</option>
+            </select>
+          </div>
+          <div>
+            <label for="stars">Star rating</label>
+            <select id="stars">
+              <option value="1">1 star</option>
+              <option value="2">2 stars</option>
+              <option value="3">3 stars</option>
+            </select>
+          </div>
+        </div>
+        <label for="reviewText">Paste the review (optional, helps you check what you should NOT echo back)</label>
+        <textarea id="reviewText" placeholder="Paste the full review here so the privacy checker can flag risky words..."></textarea>
+        <div class="actions">
+          <button class="main" id="generate" type="button">Generate reply</button>
+          <button class="secondary" id="copyReply" type="button">Copy reply</button>
+        </div>
+      </section>
+    </main>
+
+    <section class="output" aria-live="polite">
+      <h2>Your privacy-safe reply</h2>
+      <div class="message" id="reply"></div>
+      <div class="warn" id="warn" hidden></div>
+      <button class="secondary" type="button" data-copy="reply">Copy reply</button>
+    </section>
+
+    <section class="callout">
+      <strong>Want the full reply library on one printable page?</strong>
+      <span class="small">The $10 Med Spa Review Reply Swipe File has 25+ templates plus a front-desk cheat sheet. The $29 kit adds a tracker, dashboard, request templates, and a weekly SOP.</span>
+      <div class="actions">
+        <a class="button primary" href="https://localliftstudio.gumroad.com/l/dxppjd">Get the $10 swipe file</a>
+        <a class="button" href="https://localliftstudio.gumroad.com/l/qkpxfz">Or the $29 full kit</a>
+      </div>
+    </section>
+
+    <footer>Local Lift Studio - Built for calm, privacy-safe review replies, not review gating.</footer>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const TEMPLATES = {
+      result: {
+        warm: "Thank you for your honest feedback. Results from any aesthetic service can vary from person to person, and we take it seriously when an experience does not meet expectations. Because privacy matters, we cannot discuss specifics publicly. Please contact us at [CONTACT] so our team can speak with you directly.",
+        clinical: "Thank you for taking the time to leave this feedback. Outcomes from aesthetic services vary, and we want to better understand your experience. Because privacy matters, we cannot review specifics publicly. Please contact us at [CONTACT] so we can review your concerns directly.",
+        brief: "Thank you for your feedback. Results can vary, and we take this seriously. We cannot discuss specifics publicly. Please contact us at [CONTACT]."
+      },
+      cost: {
+        warm: "Thank you for sharing this feedback. We work hard to be transparent about pricing, and we are sorry your experience did not reflect that. Please contact us at [CONTACT] so our team can look into the details with you directly.",
+        clinical: "Thank you for letting us know. Pricing should be clear at every step, and we want to understand where it was not. Please contact us at [CONTACT] so we can review the details.",
+        brief: "Thank you for the feedback. We aim for clear pricing and want to look into this. Please reach out at [CONTACT]."
+      },
+      wait: {
+        warm: "Thank you for taking the time to share this. We are sorry your visit did not match the calm, on-time experience we want every client to have. If you would like to share more, please contact us at [CONTACT].",
+        clinical: "Thank you for the feedback. On-time scheduling is a priority and we want to understand what happened during your visit. Please contact us at [CONTACT].",
+        brief: "Thank you for the feedback. We are sorry the timing did not match expectations. Please reach out at [CONTACT]."
+      },
+      staff: {
+        warm: "Thank you for letting us know how this visit felt. We hold our team to a warm, professional standard, and we are sorry your experience did not match that. Please reach out at [CONTACT] so we can learn more and address it internally.",
+        clinical: "Thank you for the feedback. Our team is trained to provide every client with a calm and professional experience. We want to learn more. Please contact us at [CONTACT].",
+        brief: "Thank you for the feedback. We hold our team to a warm, professional standard. Please reach out at [CONTACT]."
+      },
+      rushed: {
+        warm: "Thank you for your feedback. Every client should leave feeling heard, not hurried, and we are sorry your visit did not reflect that. We would appreciate the chance to talk directly at [CONTACT].",
+        clinical: "Thank you for the feedback. Each visit should feel unhurried and attentive. We would like to understand what happened. Please contact us at [CONTACT].",
+        brief: "Thank you for the feedback. Visits should never feel hurried. Please reach out at [CONTACT]."
+      },
+      hygiene: {
+        warm: "Thank you for raising this. Cleanliness and safety are not negotiable at our med spa, and any concern in this area is reviewed directly by leadership. Please contact us at [CONTACT] so we can look into your visit right away.",
+        clinical: "Thank you for bringing this to our attention. Cleanliness and safety concerns are reviewed directly by leadership. Please contact us at [CONTACT] so we can address this without delay.",
+        brief: "Thank you for raising this. Cleanliness and safety concerns go straight to leadership. Please reach out at [CONTACT]."
+      },
+      refund: {
+        warm: "Thank you for bringing this to our attention. Billing concerns are best handled directly so we can review records together. Please reach out to [CONTACT] and our team will respond within one business day.",
+        clinical: "Thank you for the feedback. Billing matters are reviewed privately. Please contact us at [CONTACT] and we will respond within one business day.",
+        brief: "Thank you for the feedback. Billing concerns are handled privately. Please reach out at [CONTACT]."
+      },
+      vague: {
+        warm: "Thank you for taking the time to share this. We are sorry your visit was not the experience we wanted for you. We would like to understand more. Please reach out to [CONTACT].",
+        clinical: "Thank you for the feedback. We want to better understand your experience. Please contact us at [CONTACT].",
+        brief: "Thank you for the feedback. We would like to understand more. Please reach out at [CONTACT]."
+      }
+    };
+
+    const RISKY_WORDS = ["botox","filler","laser","hydrafacial","microneedling","prp","kybella","dysport","xeomin","sculptra","semaglutide","ozempic","injection","needle","ipl","chemical peel","prescription","botulinum","tretinoin","retinol"];
+
+    function buildReply() {
+      const spaName = ($('spaName').value || 'our med spa').trim();
+      const contact = ($('contact').value || '[Phone or Email]').trim();
+      const reviewerName = ($('reviewerName').value || '').trim();
+      const category = $('category').value;
+      const tone = $('tone').value;
+      const reviewText = ($('reviewText').value || '').toLowerCase();
+
+      const opener = reviewerName ? `Hi ${reviewerName}. ` : '';
+      let body = TEMPLATES[category][tone];
+      body = body.replace(/\[CONTACT\]/g, contact);
+      const signoff = `\n\nSincerely, the team at ${spaName}.`;
+      const full = `${opener}${body}${signoff}`;
+      $('reply').textContent = full;
+
+      // Privacy check
+      const flags = [];
+      RISKY_WORDS.forEach(w => { if (reviewText.includes(w)) flags.push(w); });
+      const warn = $('warn');
+      if (flags.length) {
+        warn.hidden = false;
+        warn.innerHTML = `<strong>Heads up:</strong> the review mentions: ${flags.map(f => `<code>${f}</code>`).join(', ')}. Do NOT echo those words in your reply. Our generated reply already keeps you safe, but if you edit it, keep it general.`;
+      } else {
+        warn.hidden = true;
+        warn.textContent = '';
+      }
+      return full;
+    }
+
+    async function copyText(text) {
+      try { await navigator.clipboard.writeText(text); }
+      catch (e) {
+        const ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+      }
+    }
+
+    $('generate').addEventListener('click', buildReply);
+    $('copyReply').addEventListener('click', () => copyText(buildReply()));
+    document.querySelectorAll('[data-copy]').forEach(btn => {
+      btn.addEventListener('click', () => copyText($(btn.dataset.copy).textContent));
+    });
+    buildReply();
+  </script>
+  <script data-goatcounter="https://localliftkits.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
