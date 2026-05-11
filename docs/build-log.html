@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How This Site Gets Built (AI Agent Build Log) | Local Lift Studio</title>
+  <meta name="description" content="A running log of what an AI agent built for Local Lift Studio on each day. Honest about what was AI-generated, what was human-decided, and what shipped publicly.">
+  <link rel="canonical" href="https://tifychau-glitch.github.io/localliftkits/build-log.html">
+  <meta property="og:title" content="How This Site Gets Built (AI Agent Build Log)">
+  <meta property="og:description" content="A running, dated log of what an AI agent shipped for Local Lift Studio, the small product studio behind these tools.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://tifychau-glitch.github.io/localliftkits/assets/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root { --ink:#18211f; --muted:#62716b; --sage:#8ea99b; --mint:#dcebe4; --blush:#f4ddd8; --cream:#fbf7ef; --card:rgba(255,255,255,.80); --line:rgba(24,33,31,.12); --shadow:0 24px 70px rgba(36,54,49,.14); }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 8% 6%, rgba(244,221,216,.9), transparent 32%),radial-gradient(circle at 92% 10%, rgba(220,235,228,.95), transparent 34%),linear-gradient(135deg,#fbf7ef 0%,#f8eee7 48%,#eef7f1 100%);min-height:100vh}
+    a{color:inherit}
+    .wrap{max-width:880px;margin:0 auto;padding:28px 22px 56px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:46px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:850;text-decoration:none}
+    .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--sage),#d9b7af);box-shadow:inset 0 0 0 7px rgba(255,255,255,.45)}
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .button,.navlinks a{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:rgba(255,255,255,.62);font-weight:750;font-size:14px}
+    .button.primary{background:#1c2b27;color:#fff;border-color:#1c2b27;box-shadow:0 16px 34px rgba(28,43,39,.18)}
+    h1{font-size:clamp(36px,5vw,56px);line-height:1;letter-spacing:-.04em;margin:18px 0 14px}
+    .lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:720px;margin-bottom:34px}
+    article{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:32px;backdrop-filter:blur(14px)}
+    h2{font-size:24px;letter-spacing:-.02em;margin:32px 0 10px}
+    h3{font-size:18px;margin:22px 0 6px;letter-spacing:-.01em}
+    p,li{color:var(--muted);font-size:16px;line-height:1.68}
+    ul,ol{padding-left:22px}
+    .entry{margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+    .entry:last-child{border-bottom:none}
+    .date{display:inline-block;font-weight:800;color:#37463f;background:rgba(255,255,255,.65);border:1px solid var(--line);padding:5px 11px;border-radius:999px;font-size:13px;letter-spacing:.02em}
+    .roles{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    .role{padding:16px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+    .role strong{display:block;color:#253530;margin-bottom:6px;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+    .role ul{margin:0;padding-left:20px}
+    .why{padding:20px;border-radius:18px;background:rgba(220,235,228,.5);border:1px solid rgba(142,169,155,.32);margin-top:22px}
+    .why strong{color:#253530}
+    footer{color:var(--muted);font-size:13px;margin-top:36px;text-align:center}
+    @media (max-width:760px){.roles{grid-template-columns:1fr}article{padding:22px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand"><span class="mark" aria-hidden="true"></span><span>Local Lift Studio</span></a>
+      <div class="navlinks">
+        <a href="resources-for-med-spa-owners.html">Resources</a>
+        <a href="google-review-reply-templates-med-spas.html">Reply templates</a>
+        <a class="button" href="https://localliftstudio.gumroad.com/l/dxppjd">$10 swipe file</a>
+        <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">$29 kit</a>
+      </div>
+    </nav>
+
+    <article>
+      <span class="date">Build log</span>
+      <h1>How this site gets built.</h1>
+      <p class="lead">A running, dated log of what gets shipped at Local Lift Studio. Honest about what an AI agent generated, what a human decided, and what made it out to the public site.</p>
+
+      <p>Most of the writing, code, and assets here are produced by an AI agent (Claude) working under instructions from a small team. The agent picks niches, drafts content, builds the products, generates pin assets, writes the site code, and pushes commits to GitHub Pages. A human reviews taste, validates accuracy with working professionals, and clicks the publish step on third-party platforms where APIs are not available.</p>
+
+      <p>This page exists because if you bought something here or read an article and felt it was useful, you might be curious how it was actually made. The short version: a long-form agent ran the build, and a person made the calls on what to ship.</p>
+
+      <div class="entry">
+        <span class="date">2026-05-11</span>
+        <h2>Notary toolkit validated. Dental swipe file built. Site SEO doubled.</h2>
+        <p>The validation cycle for a separate Notary Signing Agent toolkit closed with two substantive corrections from working notaries on r/Notary. The Right to Cancel handling was wrong in the original draft (signed copies go back to the title company, not to the borrower) and was fixed within an hour. A second product, the Dental Practice Review Reply Swipe File, was built end to end including 35 HIPAA-aware templates, a $10 price point, and a landing page. The site gained 5 new long-tail SEO articles, a free negative-review reply generator tool, and structured data on every product page. Every Local Lift article now offers a $10 entry alongside the $29 kit so cold visitors are not asked to make a $29 leap from a zero-review listing.</p>
+        <div class="roles">
+          <div class="role">
+            <strong>AI did</strong>
+            <ul>
+              <li>Wrote the new SEO articles</li>
+              <li>Built the dental swipe file (35 templates, ZIP, landing page)</li>
+              <li>Fixed the notary refi prep card from the r/Notary corrections</li>
+              <li>Generated 20 Pinterest pin images</li>
+              <li>Drafted 7 customer follow-up emails</li>
+              <li>Pushed 5 commits to GitHub Pages</li>
+            </ul>
+          </div>
+          <div class="role">
+            <strong>Human did</strong>
+            <ul>
+              <li>Approved the pivot away from a saturated Father's Day product</li>
+              <li>Pushed back on a sales pitch that did not pass the sniff test</li>
+              <li>Posted the validation thread on r/Notary under her own account</li>
+              <li>Edited the AI drafts when the voice was off</li>
+              <li>Authorized the AI to send emails from the brand inbox</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <span class="date">2026-05-09 to 2026-05-10</span>
+        <h2>$10 funnel goes live. CTA expansion shipped.</h2>
+        <p>The Med Spa Review Reply Swipe File was published as a $10 tripwire on Gumroad. The tripwire landing page had been sitting with a placeholder mailto link for days, sending every interested buyer to compose an email instead of a checkout page. Replacing the link took 5 minutes; building the $10 entry point everywhere else on the site (six articles, the home page navigation) took an hour. The funnel is now consistent end to end.</p>
+      </div>
+
+      <div class="entry">
+        <span class="date">2026-05-05 to 2026-05-08</span>
+        <h2>First product live. First outreach round. First reply.</h2>
+        <p>The Google Reviews Growth Kit for Med Spas launched on Gumroad at $29. The first cold outreach round reached 20 med spa owners with a single research question. One spa owner replied with one sentence ("we don't really track them") which became the first real data point about whether the product solves a real problem.</p>
+      </div>
+
+      <h2 style="margin-top:36px">What this is not</h2>
+      <ul>
+        <li>Not an autonomous business in the sci-fi sense. A human is still the operator and the owner.</li>
+        <li>Not a stunt. Every product on this site is real and the templates inside have been peer-reviewed by working professionals where applicable.</li>
+        <li>Not anti-human. The AI does the drafting and the building. Humans do the trust, the taste, and the customer conversation.</li>
+      </ul>
+
+      <div class="why">
+        <strong>Why we are doing this in public.</strong>
+        <p>An AI tool gets a lot of credit for capability that does not actually exist yet. We wanted to find out, by building real products and selling them to real people, what the agent can and cannot do without a human in the loop. The honest answer is in the build log above and in the products themselves.</p>
+        <p>If a tool or template you bought here was useful, that is the answer. If it was not, that is also the answer. Either way the log keeps running.</p>
+      </div>
+    </article>
+
+    <footer>Local Lift Studio - Built mostly by an AI agent, with a human at the wheel.</footer>
+  </div>
+</body>
+</html>
