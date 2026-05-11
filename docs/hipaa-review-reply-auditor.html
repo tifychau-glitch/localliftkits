@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free HIPAA Risk Auditor for Google Review Replies (Med Spas, Dental)</title>
+  <meta name="description" content="Free tool. Paste a draft Google review reply, get an instant HIPAA risk score plus a list of phrases that could expose protected health information. Built for med spas, dental practices, and small clinics.">
+  <link rel="canonical" href="https://tifychau-glitch.github.io/localliftkits/hipaa-review-reply-auditor.html">
+  <meta property="og:title" content="Free HIPAA Risk Auditor for Google Review Replies">
+  <meta property="og:description" content="Paste a draft Google review reply. Get an instant HIPAA risk score and a list of phrases that could expose PHI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tifychau-glitch.github.io/localliftkits/og/hipaa-review-reply-auditor.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "HIPAA Review Reply Auditor",
+    "description": "Paste a Google review reply, scan for HIPAA risk language, get a risk score and per-issue explanations.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "publisher": {"@type": "Organization", "name": "Local Lift Studio"}
+  }
+  </script>
+  <style>
+    :root { --ink:#18211f; --muted:#62716b; --sage:#8ea99b; --mint:#dcebe4; --blush:#f4ddd8; --cream:#fbf7ef; --card:rgba(255,255,255,.80); --line:rgba(24,33,31,.12); --shadow:0 24px 70px rgba(36,54,49,.14); --red:#9a3939; --amber:#a87026; --green:#3a6b4c; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 8% 6%, rgba(244,221,216,.9), transparent 32%),radial-gradient(circle at 92% 10%, rgba(220,235,228,.95), transparent 34%),linear-gradient(135deg,#fbf7ef 0%,#f8eee7 48%,#eef7f1 100%);min-height:100vh}
+    a{color:inherit}
+    .wrap{max-width:960px;margin:0 auto;padding:28px 22px 56px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:46px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:850;text-decoration:none}
+    .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--sage),#d9b7af);box-shadow:inset 0 0 0 7px rgba(255,255,255,.45)}
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .button,.navlinks a{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:rgba(255,255,255,.62);font-weight:750;font-size:14px;cursor:pointer}
+    .button.primary{background:#1c2b27;color:#fff;border-color:#1c2b27;box-shadow:0 16px 34px rgba(28,43,39,.18)}
+    h1{font-size:clamp(40px,6vw,64px);line-height:.96;letter-spacing:-.05em;margin:18px 0 14px}
+    .lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:720px;margin-bottom:28px}
+    .eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.65);border:1px solid var(--line);color:#43564f;font-weight:800;font-size:13px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:28px;backdrop-filter:blur(14px);margin-bottom:22px}
+    label{display:block;font-weight:800;font-size:14px;color:#253530;margin-bottom:6px;letter-spacing:.01em}
+    .hint{font-size:13px;color:var(--muted);margin-bottom:10px;line-height:1.4}
+    textarea{width:100%;min-height:140px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.78);font-size:15px;color:#253530;font-family:inherit;line-height:1.55;resize:vertical}
+    textarea:focus{outline:none;border-color:var(--sage);background:#fff}
+    .actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .score{padding:18px;border-radius:18px;text-align:center;margin-top:18px;display:none}
+    .score.show{display:block}
+    .score .num{font-size:48px;font-weight:850;letter-spacing:-.04em;line-height:1.05}
+    .score .lbl{font-size:13px;text-transform:uppercase;font-weight:800;letter-spacing:.05em;margin-bottom:4px}
+    .score.red{background:rgba(154,57,57,.12);border:1px solid rgba(154,57,57,.4);color:var(--red)}
+    .score.amber{background:rgba(168,112,38,.12);border:1px solid rgba(168,112,38,.4);color:var(--amber)}
+    .score.green{background:rgba(58,107,76,.12);border:1px solid rgba(58,107,76,.4);color:var(--green)}
+    .findings{margin-top:18px}
+    .finding{padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:8px;font-size:14px;color:#253530;line-height:1.55}
+    .finding b{color:var(--red)}
+    .finding.note b{color:var(--amber)}
+    .finding.good b{color:var(--green)}
+    p,li{color:var(--muted);font-size:16px;line-height:1.65}
+    h2{font-size:24px;letter-spacing:-.02em;margin:22px 0 10px}
+    .note{padding:16px 18px;border-radius:14px;background:rgba(244,221,216,.45);border:1px solid rgba(217,183,175,.45);color:#4a5d57;line-height:1.55;font-size:14px}
+    footer{color:var(--muted);font-size:13px;margin-top:36px;text-align:center}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Local Lift Studio",
+      "item": "https://tifychau-glitch.github.io/localliftkits/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Free HIPAA Risk Auditor for Google Review Replies (Med Spas, Dental)",
+      "item": "https://tifychau-glitch.github.io/localliftkits/hipaa-review-reply-auditor.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand"><span class="mark" aria-hidden="true"></span><span>Local Lift Studio</span></a>
+      <div class="navlinks">
+        <a href="negative-review-reply-generator.html">Reply generator</a>
+        <a href="resources-for-med-spa-owners.html">Resources</a>
+        <a class="button" href="https://localliftstudio.gumroad.com/l/dxppjd">$10 swipe file</a>
+        <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">$29 kit</a>
+      </div>
+    </nav>
+
+    <main>
+      <span class="eyebrow">Free tool - no signup</span>
+      <h1>HIPAA risk auditor for review replies.</h1>
+      <p class="lead">Paste a draft Google review reply you are about to post. Get an instant risk score plus a list of phrases that could expose protected health information. Built for med spas, dental practices, and small medical clinics.</p>
+
+      <div class="card">
+        <label for="reply">Your draft public reply</label>
+        <div class="hint">Paste what you are planning to post on Google. Nothing is sent to a server. The check runs in your browser.</div>
+        <textarea id="reply" placeholder="Hi Sarah, thank you for choosing our clinic for your Botox appointment last Tuesday. Dr. Patel really enjoyed working with you..."></textarea>
+        <div class="actions">
+          <button class="button primary" onclick="audit()">Run the audit</button>
+          <button class="button" onclick="document.getElementById('reply').value=''; document.getElementById('score').className='score'; document.getElementById('findings').innerHTML='';">Clear</button>
+        </div>
+
+        <div id="score" class="score">
+          <div class="lbl">Risk score</div>
+          <div class="num" id="score-num">-</div>
+          <div id="score-msg"></div>
+        </div>
+        <div id="findings" class="findings"></div>
+      </div>
+
+      <div class="card">
+        <h2>What the audit catches</h2>
+        <ul>
+          <li>Words that confirm the reviewer was a patient (their name, "your appointment," "your visit," "thanks for coming in")</li>
+          <li>Treatment names (Botox, filler, laser, peel, microneedling, etc.)</li>
+          <li>Provider names with titles (Dr., Nurse, NP, RN, PA)</li>
+          <li>Appointment specifics (date references, day of the week, time)</li>
+          <li>Billing or insurance terms (refund, charge, copay, deductible)</li>
+          <li>Length warnings (replies over 5 sentences read defensive)</li>
+        </ul>
+        <p>What it does not catch: subtle context clues, voice tone, state-specific board rules. This is a first-pass scan. Your compliance officer is the final word.</p>
+      </div>
+
+      <div class="card">
+        <h2>If your reply scored high risk</h2>
+        <p>The fastest fix is to use a privacy-aware template instead of writing from scratch under pressure. The $10 Med Spa Review Reply Swipe File has 35 templates that pre-pass this audit.</p>
+        <div class="actions">
+          <a class="button primary" href="https://localliftstudio.gumroad.com/l/dxppjd">Get the $10 swipe file</a>
+          <a class="button" href="https://tifychau-glitch.github.io/localliftkits/Free%20Lead%20Magnet/HIPAA-safe%20Google%20Review%20Reply%20Checklist.pdf">Free 1-page checklist (PDF)</a>
+        </div>
+      </div>
+
+      <div class="note">
+        Privacy: this audit runs entirely in your browser using JavaScript. Your draft text is never sent to any server. View source if you want to verify.
+      </div>
+    </main>
+
+    <footer>Local Lift Studio - Free tools for med spa review workflows.</footer>
+  </div>
+
+  <script>
+    var rules = [
+      // Treatment names (high risk - confirms procedure)
+      {pattern: /\b(botox|filler|fillers|dermal filler|sculptra|juvederm|restylane|microneedling|hydrafacial|chemical peel|peel|laser|ipl|coolsculpting|kybella|sclerotherapy|prp|vampire facial|dermaplaning|microcurrent|morpheus|emsculpt|emsella|tox|neurotox|neuromodulator|dysport|xeomin|jeuveau|rhinoplasty|liposuction|brazilian butt lift|bbl|tummy tuck|breast augmentation|implants|veneers|crowns|invisalign|whitening|extraction|root canal|cleaning|filling|implant)\b/gi, label: "Treatment name", severity: "high", explain: "Naming a treatment confirms what the reviewer had. Use 'service' or 'visit' instead."},
+      // Provider names with titles
+      {pattern: /\b(Dr\.?|Doctor|Nurse|RN|NP|PA|MD|DDS|DMD)\s+[A-Z][a-z]+/g, label: "Provider name with title", severity: "high", explain: "Identifying which provider treated the reviewer is a HIPAA exposure. Remove the name."},
+      // Appointment specifics
+      {pattern: /\b(your appointment|your visit|your consult|your consultation|your treatment|your procedure|your session|your visit was|when you came in|last (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)|this (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)|on (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday))\b/gi, label: "Confirms reviewer was a patient", severity: "high", explain: "Phrases like 'your appointment' implicitly confirm the reviewer was a patient. Use 'we are sorry your experience did not meet expectations' instead."},
+      // Billing/insurance
+      {pattern: /\b(refund|refunded|charge|charged|insurance|copay|copayment|deductible|invoice|invoiced|billing|billed|payment|paid for|cost of your|price of your)\b/gi, label: "Billing or insurance reference", severity: "high", explain: "Discussing billing in public can expose financial detail. Move billing conversations private."},
+      // Direct address by name (medium risk)
+      {pattern: /\b(Hi|Hello|Dear|Hey)\s+[A-Z][a-z]+\b/g, label: "Reviewer's name used in greeting", severity: "medium", explain: "Greeting by first name confirms identity. For a negative review, address the team instead: 'Thank you for sharing this feedback.'"},
+      // Refund offer public
+      {pattern: /\b(complimentary|free|on us|no charge|comp(ed)?|on the house)\b/gi, label: "Public freebie or comp offer", severity: "medium", explain: "Public comp offers can read as buying silence and invite more demands. Move to private."},
+      // Defensiveness markers
+      {pattern: /\b(actually|in fact|the truth is|to be clear|let me clarify|that's not what happened|that did not happen|you are mistaken|you are wrong|in our records|in your chart|our notes show)\b/gi, label: "Defensive or argumentative tone", severity: "medium", explain: "Even when factually correct, arguing publicly damages reputation. Acknowledge the feeling and move private."},
+      // Chart or records reference
+      {pattern: /\b(your chart|in your chart|chart notes|records show|in our notes|file notes|the consultation notes|our records)\b/gi, label: "Reference to records or chart", severity: "high", explain: "Quoting internal records publicly is a HIPAA exposure even paraphrased. Never reference chart contents in a public reply."},
+    ];
+
+    function audit(){
+      var text = document.getElementById('reply').value.trim();
+      var findings = document.getElementById('findings');
+      var scoreEl = document.getElementById('score');
+      var scoreNum = document.getElementById('score-num');
+      var scoreMsg = document.getElementById('score-msg');
+
+      if (!text) {
+        findings.innerHTML = '';
+        scoreEl.className = 'score';
+        return;
+      }
+
+      var hits = [];
+      var hitCount = 0;
+      var highCount = 0;
+      var mediumCount = 0;
+
+      rules.forEach(function(rule){
+        var matches = text.match(rule.pattern);
+        if (matches && matches.length > 0) {
+          var unique = Array.from(new Set(matches.map(function(m){ return m.toLowerCase(); })));
+          hits.push({
+            label: rule.label,
+            severity: rule.severity,
+            explain: rule.explain,
+            examples: unique.slice(0, 3)
+          });
+          hitCount += matches.length;
+          if (rule.severity === 'high') highCount += matches.length;
+          else mediumCount += matches.length;
+        }
+      });
+
+      // Length check
+      var sentenceCount = (text.match(/[.!?]+/g) || []).length;
+      if (sentenceCount > 5) {
+        hits.push({label: "Reply too long", severity: "medium", explain: "Replies over 5 sentences read defensive even when calm. Target 2 to 4 sentences.", examples: [sentenceCount + " sentences detected"]});
+        mediumCount++;
+      }
+
+      // Compute risk score: 0-100
+      var risk = Math.min(100, highCount * 25 + mediumCount * 10);
+      var level, message;
+      if (risk >= 50) {
+        level = "red";
+        message = "High risk. Rewrite before posting. Multiple HIPAA exposures or strong defensive tone.";
+      } else if (risk >= 20) {
+        level = "amber";
+        message = "Medium risk. Worth a second pass before posting. Specific phrases below.";
+      } else if (risk > 0) {
+        level = "amber";
+        message = "Low-medium risk. One or two phrases worth reviewing.";
+      } else {
+        level = "green";
+        message = "No risk patterns detected. Still have a teammate read it before posting if the review is emotional or specific.";
+      }
+
+      scoreEl.className = 'score show ' + level;
+      scoreNum.textContent = risk;
+      scoreMsg.textContent = message;
+
+      if (hits.length === 0) {
+        findings.innerHTML = '<div class="finding good"><b>Clean.</b> No risk patterns detected in the draft.</div>';
+      } else {
+        findings.innerHTML = hits.map(function(h){
+          var sev = h.severity === 'high' ? '' : 'note';
+          return '<div class="finding ' + sev + '"><b>' + h.label + ' (' + h.severity + ')</b><br>' + h.explain + '<br><small>Found: ' + h.examples.join(', ') + '</small></div>';
+        }).join('');
+      }
+    }
+  </script>
+</body>
+</html>
