@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Med Spa Review Reply Tone Analyzer (Free) - HIPAA-Safe Audit Tool</title>
+  <meta name="description" content="Paste your draft Google review reply. The free tool flags HIPAA risks, defensive language, treatment-naming, missing privacy lines, and over-length issues before you post.">
+  <link rel="canonical" href="https://tifychau-glitch.github.io/localliftkits/review-reply-tone-analyzer.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta property="og:title" content="Med Spa Review Reply Tone Analyzer (Free)">
+  <meta property="og:description" content="Free tool: paste your draft Google review reply and get a 10-point audit for HIPAA risk, tone, length, and missing fixes before you post.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tifychau-glitch.github.io/localliftkits/og/review-reply-tone-analyzer.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Local Lift Studio","item":"https://tifychau-glitch.github.io/localliftkits/"},
+    {"@type":"ListItem","position":2,"name":"Free Tools","item":"https://tifychau-glitch.github.io/localliftkits/resources-for-med-spa-owners.html"},
+    {"@type":"ListItem","position":3,"name":"Review Reply Tone Analyzer","item":"https://tifychau-glitch.github.io/localliftkits/review-reply-tone-analyzer.html"}
+  ]
+}
+</script>
+  <style>
+    :root { --ink:#18211f; --muted:#62716b; --sage:#8ea99b; --mint:#dcebe4; --blush:#f4ddd8; --cream:#fbf7ef; --card:rgba(255,255,255,.80); --line:rgba(24,33,31,.12); --shadow:0 24px 70px rgba(36,54,49,.14); --good:#3a7d5d; --warn:#b07533; --bad:#b85a4e; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 8% 6%, rgba(244,221,216,.9), transparent 32%),radial-gradient(circle at 92% 10%, rgba(220,235,228,.95), transparent 34%),linear-gradient(135deg,#fbf7ef 0%,#f8eee7 48%,#eef7f1 100%);min-height:100vh}
+    a{color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px 22px 56px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:46px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:850;text-decoration:none}
+    .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--sage),#d9b7af);box-shadow:inset 0 0 0 7px rgba(255,255,255,.45)}
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .button,.navlinks a{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:rgba(255,255,255,.62);font-weight:750;font-size:14px;cursor:pointer}
+    .button.primary{background:#1c2b27;color:#fff;border-color:#1c2b27;box-shadow:0 16px 34px rgba(28,43,39,.18)}
+    .eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.65);border:1px solid var(--line);color:#43564f;font-weight:800;font-size:13px}
+    h1{font-size:clamp(36px,5.5vw,56px);line-height:.96;letter-spacing:-.05em;margin:18px 0 12px}
+    .lead{font-size:18px;line-height:1.55;color:var(--muted);max-width:760px;margin-bottom:24px}
+    .layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px;align-items:start;margin-top:18px}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);backdrop-filter:blur(14px);padding:24px}
+    label{font-weight:800;font-size:14px;color:#33423e;display:block;margin-bottom:8px}
+    textarea{width:100%;min-height:240px;padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.92);font:inherit;font-size:15px;line-height:1.55;color:var(--ink);resize:vertical}
+    .controls{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .score{display:flex;align-items:center;gap:14px;padding:18px;border-radius:18px;background:rgba(255,255,255,.65);border:1px solid var(--line);margin-bottom:18px}
+    .score .num{font-size:42px;font-weight:900;letter-spacing:-.03em;line-height:1}
+    .score .num.good{color:var(--good)}
+    .score .num.warn{color:var(--warn)}
+    .score .num.bad{color:var(--bad)}
+    .score .verdict{font-weight:800;font-size:16px}
+    .score .verdict small{display:block;font-weight:500;color:var(--muted);font-size:13px;margin-top:2px}
+    .check{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.5}
+    .check:first-of-type{border-top:0}
+    .icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:#fff;margin-top:1px}
+    .icon.pass{background:var(--good)}
+    .icon.fail{background:var(--bad)}
+    .icon.skip{background:#9aa6a3}
+    .check .body{flex:1}
+    .check .title{font-weight:800;color:#33423e}
+    .check .detail{color:var(--muted);font-size:13.5px;margin-top:2px}
+    .flagged{background:rgba(184,90,78,.18);border-radius:4px;padding:1px 3px}
+    .placeholder{color:var(--muted);font-style:italic;padding:20px 0;text-align:center}
+    .cta{display:grid;gap:12px;margin:18px 0 0 0;padding:18px;border-radius:18px;background:rgba(220,235,228,.62);border:1px solid rgba(142,169,155,.38)}
+    .cta strong{font-size:17px;letter-spacing:-.025em}
+    .cta-row{display:flex;gap:8px;flex-wrap:wrap}
+    footer{color:var(--muted);font-size:13px;margin-top:44px;text-align:center}
+    @media (max-width:860px){nav{align-items:flex-start;flex-direction:column}.layout{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand"><span class="mark" aria-hidden="true"></span><span>Local Lift Studio</span></a>
+      <div class="navlinks">
+        <a href="hipaa-review-reply-auditor.html">HIPAA risk auditor</a>
+        <a href="negative-review-reply-generator.html">Reply generator</a>
+        <a class="button" href="https://localliftstudio.gumroad.com/l/dxppjd">$10 swipe file</a>
+        <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">$29 kit</a>
+      </div>
+    </nav>
+
+    <main>
+      <section>
+        <span class="eyebrow">Free tool - tone + HIPAA audit</span>
+        <h1>Review reply tone analyzer.</h1>
+        <p class="lead">Paste your draft Google review reply below. The tool flags HIPAA risks, defensive language, treatment names, missing privacy lines, and over-length issues before you hit post. Runs entirely in your browser, nothing is sent anywhere.</p>
+      </section>
+
+      <div class="layout">
+        <div class="panel">
+          <label for="reply">Paste your draft reply</label>
+          <textarea id="reply" placeholder="Example: Thank you for taking the time to share your feedback. We are sorry your experience did not meet expectations. Because patient privacy matters, we cannot discuss specifics publicly. Please contact us at hello@example.com so our team can learn more."></textarea>
+          <div class="controls">
+            <button class="button primary" onclick="analyze()">Analyze reply</button>
+            <button class="button" onclick="document.getElementById('reply').value='';document.getElementById('result').innerHTML='<div class=\'placeholder\'>Paste a draft and click Analyze.</div>';document.getElementById('highlight').innerHTML='';">Clear</button>
+          </div>
+          <label style="margin-top:18px">Original with flags highlighted</label>
+          <div id="highlight" style="padding:14px;border-radius:14px;background:rgba(255,255,255,.55);border:1px solid var(--line);min-height:80px;font-size:14.5px;line-height:1.6;white-space:pre-wrap"></div>
+        </div>
+
+        <div class="panel">
+          <label>Audit result</label>
+          <div id="result">
+            <div class="placeholder">Paste a draft and click Analyze.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <strong>Reply templates for the moments this tool finds problems.</strong>
+        <span>The $10 swipe file gives you 5 short, HIPAA-aware Google review reply templates med spas use word for word. Stop reinventing the wheel every time a 1-star lands.</span>
+        <div class="cta-row">
+          <a class="button primary" href="https://localliftstudio.gumroad.com/l/dxppjd">Get the $10 swipe file</a>
+          <a class="button" href="https://localliftstudio.gumroad.com/l/qkpxfz">Or the $29 Growth Kit</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      Local Lift Studio - tools and templates for local businesses that want trustworthy reviews. Not legal or compliance advice.
+    </footer>
+  </div>
+
+  <script>
+  // Patterns. Each returns {pass, title, detail, flags: [{regex, label}]}.
+  const TREATMENT_WORDS = [
+    "botox","filler","fillers","juvederm","restylane","dysport","xeomin","kybella",
+    "laser","ipl","fraxel","co2","ablative",
+    "peel","chemical peel","microneedling","dermaplaning","microdermabrasion",
+    "hydrafacial","facial","hydra facial","oxygen facial",
+    "coolsculpting","emsculpt","ultherapy","thermage","sofwave","morpheus",
+    "injection","injectable","injectables","filler injection",
+    "tox","neurotoxin","neuromodulator",
+    "lip flip","brow lift","jawline","cheek augmentation",
+    "prp","platelet","microblading","lash lift","brow lamination",
+    "treatment","procedure","service"
+  ];
+  const ARGUMENT_PHRASES = [
+    /\b(actually|in fact|to clarify|the truth is|that is incorrect|that is not true|you are wrong|we did not|we never)\b/gi,
+    /\bhowever\b/gi
+  ];
+  const REFUND_WORDS = /\b(refund|discount|free|complimentary|comp|credit|gift card|on the house|no charge)\b/gi;
+  const PATIENT_CONFIRM = [
+    /\byour (visit|appointment|treatment|procedure|session|consult|consultation)\b/gi,
+    /\bwhen you came in\b/gi,
+    /\bduring your\b/gi,
+    /\byour last (visit|appointment)\b/gi,
+    /\bas (a|our) (patient|client)\b/gi,
+    /\bsince you were here\b/gi
+  ];
+
+  function sentenceCount(t){
+    const trimmed = t.trim();
+    if (!trimmed) return 0;
+    return trimmed.split(/[.!?]+\s+|[.!?]+$/).filter(s => s.trim().length).length;
+  }
+
+  function analyze(){
+    const raw = document.getElementById('reply').value || '';
+    const text = raw.trim();
+    const result = document.getElementById('result');
+    const hl = document.getElementById('highlight');
+    if (!text){ result.innerHTML = '<div class="placeholder">Paste a draft first.</div>'; hl.innerHTML = ''; return; }
+
+    const lower = text.toLowerCase();
+    const checks = [];
+    let flags = []; // list of {start, end} char ranges to highlight
+
+    // 1. Length: 2 to 4 sentences
+    const sc = sentenceCount(text);
+    checks.push({
+      pass: sc >= 1 && sc <= 4,
+      title: 'Length is 2 to 4 sentences.',
+      detail: sc === 0 ? 'No complete sentences detected.' : `${sc} sentence${sc===1?'':'s'} detected. ${sc > 4 ? 'Trim. Long replies signal defensiveness.' : sc < 2 ? 'Slightly short, but a single tight sentence can work.' : 'Good.'}`
+    });
+
+    // 2. Patient confirmation
+    let patientHits = [];
+    for (const re of PATIENT_CONFIRM){
+      let m;
+      while ((m = re.exec(text)) !== null) patientHits.push({start: m.index, end: m.index + m[0].length, label: m[0]});
+    }
+    checks.push({
+      pass: patientHits.length === 0,
+      title: 'Does NOT confirm reviewer was a patient.',
+      detail: patientHits.length ? `Phrases that imply patient status: ${patientHits.map(h=>'"'+h.label+'"').join(', ')}. Rewrite to keep the relationship unconfirmed.` : 'Clean.'
+    });
+    flags = flags.concat(patientHits);
+
+    // 3. Treatment name
+    let txHits = [];
+    for (const w of TREATMENT_WORDS){
+      const re = new RegExp('\\b' + w.replace(/ /g,'\\s+') + '\\b', 'gi');
+      let m;
+      while ((m = re.exec(text)) !== null) txHits.push({start: m.index, end: m.index + m[0].length, label: m[0]});
+    }
+    checks.push({
+      pass: txHits.length === 0,
+      title: 'Does NOT name a treatment, procedure, or service.',
+      detail: txHits.length ? `Clinical terms detected: ${[...new Set(txHits.map(h=>h.label.toLowerCase()))].join(', ')}. Replace with generic neutral language.` : 'Clean.'
+    });
+    flags = flags.concat(txHits);
+
+    // 4. Opens with thanks
+    const firstSentence = text.split(/[.!?]/)[0].toLowerCase();
+    const opensThanks = /\b(thank|thanks|appreciate|grateful)\b/.test(firstSentence);
+    checks.push({
+      pass: opensThanks,
+      title: 'Opens with a short line of thanks.',
+      detail: opensThanks ? 'Good.' : 'First sentence does not include thanks. Adding a brief thanks softens the reply and is the standard opener.'
+    });
+
+    // 5. Acknowledges feeling
+    const ackFeeling = /\b(sorry|understand|hear you|regret|apologize|appreciate.*(feedback|sharing))\b/i.test(text);
+    // Only really matters for negative-feeling replies. Detect negative cue:
+    const negativeCue = /\b(disappoint|frustrat|upset|angry|terrible|awful|worst|bad|poor|unhappy|hate)\b/i.test(text);
+    checks.push({
+      pass: !negativeCue || ackFeeling,
+      title: 'Acknowledges feeling (for negative replies).',
+      detail: !negativeCue ? 'Reply does not appear to address a negative review. Skipped.' : (ackFeeling ? 'Good - acknowledgment present.' : 'Reply addresses a negative experience but does not acknowledge the feeling. Add a line like "We are sorry your experience did not meet expectations."')
+    });
+
+    // 6. Privacy line
+    const hasPrivacyLine = /\b(privacy|publicly|cannot discuss|can't discuss|cannot share|can't share)\b/i.test(text);
+    checks.push({
+      pass: !negativeCue || hasPrivacyLine,
+      title: 'Includes a privacy line.',
+      detail: !negativeCue ? 'Not strictly required for a positive review. Skipped.' : (hasPrivacyLine ? 'Good.' : 'Missing. Add a line like "Because patient privacy matters, we cannot discuss specifics publicly."')
+    });
+
+    // 7. Offline contact path
+    const hasEmail = /[\w.+-]+@[\w-]+\.[\w.-]+/.test(text);
+    const hasPhone = /(\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4})/.test(text);
+    const hasContactPhrase = /\b(contact us|reach out|reach us|call us|email us|call our|email our)\b/i.test(text);
+    const offlinePath = hasEmail || hasPhone || hasContactPhrase;
+    checks.push({
+      pass: !negativeCue || offlinePath,
+      title: 'Offers one offline contact path.',
+      detail: !negativeCue ? 'Not strictly required for positive replies. Skipped.' : (offlinePath ? 'Good.' : 'Add a phone or email line so the reviewer has a non-public path to continue the conversation.')
+    });
+
+    // 8. Doesn't argue
+    let argHits = [];
+    for (const re of ARGUMENT_PHRASES){
+      let m;
+      while ((m = re.exec(text)) !== null) argHits.push({start: m.index, end: m.index + m[0].length, label: m[0]});
+    }
+    checks.push({
+      pass: argHits.length === 0,
+      title: 'Does NOT argue with the reviewer in public.',
+      detail: argHits.length ? `Argument-flavored phrases: ${argHits.map(h=>'"'+h.label+'"').join(', ')}. The public reply is for future readers, not the reviewer. Remove counter-claims.` : 'Clean.'
+    });
+    flags = flags.concat(argHits);
+
+    // 9. No public refund offer
+    let refundHits = [];
+    let m;
+    while ((m = REFUND_WORDS.exec(text)) !== null) refundHits.push({start: m.index, end: m.index + m[0].length, label: m[0]});
+    checks.push({
+      pass: refundHits.length === 0,
+      title: 'Does NOT offer a refund or perk in public.',
+      detail: refundHits.length ? `Public-incentive language detected: ${refundHits.map(h=>'"'+h.label+'"').join(', ')}. Move any offer into a private channel.` : 'Clean.'
+    });
+    flags = flags.concat(refundHits);
+
+    // 10. Speed (manual)
+    checks.push({
+      pass: null,
+      title: 'Posted within 72 hours of the review.',
+      detail: 'The tool cannot detect timing. If the review is older than 72 hours, still reply, but speed matters for the next one.',
+      skip: true
+    });
+
+    // Score: count passes among 9 auto-checks; skipped item is informational only.
+    let passes = 0, total = 0;
+    for (const c of checks){ if (c.pass === null) continue; total++; if (c.pass) passes++; }
+    const score = total ? Math.round((passes/total) * 10) : 0;
+    const cls = score >= 8 ? 'good' : score >= 5 ? 'warn' : 'bad';
+    const verdict = score >= 8 ? 'Healthy. Ready to post.' : score >= 5 ? 'Needs targeted fixes.' : 'Rebuild from a template.';
+    const subtext = score >= 8 ? 'Looks clean on length, HIPAA, tone, and contact path.' : score >= 5 ? 'Fix the flagged items, then re-analyze.' : 'Too many HIPAA or tone issues. Use a template.';
+
+    let html = `<div class="score"><div class="num ${cls}">${score}/10</div><div class="verdict">${verdict}<small>${subtext}</small></div></div>`;
+    for (const c of checks){
+      const icon = c.pass === null ? '<div class="icon skip">-</div>' : c.pass ? '<div class="icon pass">&#10003;</div>' : '<div class="icon fail">!</div>';
+      html += `<div class="check">${icon}<div class="body"><div class="title">${c.title}</div><div class="detail">${c.detail}</div></div></div>`;
+    }
+    result.innerHTML = html;
+
+    // Highlight flagged ranges
+    if (flags.length === 0){
+      hl.innerHTML = escapeHtml(text);
+    } else {
+      flags.sort((a,b) => a.start - b.start);
+      // Merge overlapping ranges
+      const merged = [];
+      for (const f of flags){
+        if (merged.length && f.start <= merged[merged.length-1].end) merged[merged.length-1].end = Math.max(merged[merged.length-1].end, f.end);
+        else merged.push({start: f.start, end: f.end});
+      }
+      let out = '', cursor = 0;
+      for (const r of merged){
+        out += escapeHtml(text.slice(cursor, r.start));
+        out += `<span class="flagged">${escapeHtml(text.slice(r.start, r.end))}</span>`;
+        cursor = r.end;
+      }
+      out += escapeHtml(text.slice(cursor));
+      hl.innerHTML = out;
+    }
+  }
+
+  function escapeHtml(s){
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+  </script>
+</body>
+</html>
