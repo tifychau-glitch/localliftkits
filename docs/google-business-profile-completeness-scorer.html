@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Google Business Profile Completeness Scorer (Med Spa Edition)</title>
+  <meta name="description" content="Free 20-point checker that scores your med spa's Google Business Profile. Tick the boxes, get a completeness score, see exactly what to fix next. Runs in your browser.">
+  <link rel="canonical" href="https://tifychau-glitch.github.io/localliftkits/google-business-profile-completeness-scorer.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta property="og:title" content="Free Google Business Profile Completeness Scorer (Med Spa)">
+  <meta property="og:description" content="20-point checker. Score your med spa's GBP and see the fixes ranked by impact. Free, browser-only.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tifychau-glitch.github.io/localliftkits/og/google-business-profile-completeness-scorer.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Local Lift Studio","item":"https://tifychau-glitch.github.io/localliftkits/"},
+    {"@type":"ListItem","position":2,"name":"Free Tools","item":"https://tifychau-glitch.github.io/localliftkits/resources-for-med-spa-owners.html"},
+    {"@type":"ListItem","position":3,"name":"Google Business Profile Completeness Scorer","item":"https://tifychau-glitch.github.io/localliftkits/google-business-profile-completeness-scorer.html"}
+  ]
+}
+</script>
+  <style>
+    :root { --ink:#18211f; --muted:#62716b; --sage:#8ea99b; --mint:#dcebe4; --blush:#f4ddd8; --cream:#fbf7ef; --card:rgba(255,255,255,.80); --line:rgba(24,33,31,.12); --shadow:0 24px 70px rgba(36,54,49,.14); --good:#3a7d5d; --warn:#b07533; --bad:#b85a4e; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 8% 6%, rgba(244,221,216,.9), transparent 32%),radial-gradient(circle at 92% 10%, rgba(220,235,228,.95), transparent 34%),linear-gradient(135deg,#fbf7ef 0%,#f8eee7 48%,#eef7f1 100%);min-height:100vh}
+    a{color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px 22px 56px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:46px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:850;text-decoration:none}
+    .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--sage),#d9b7af);box-shadow:inset 0 0 0 7px rgba(255,255,255,.45)}
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .button,.navlinks a{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:rgba(255,255,255,.62);font-weight:750;font-size:14px;cursor:pointer}
+    .button.primary{background:#1c2b27;color:#fff;border-color:#1c2b27;box-shadow:0 16px 34px rgba(28,43,39,.18)}
+    .eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.65);border:1px solid var(--line);color:#43564f;font-weight:800;font-size:13px}
+    h1{font-size:clamp(36px,5vw,56px);line-height:.96;letter-spacing:-.05em;margin:18px 0 12px}
+    .lead{font-size:18px;line-height:1.55;color:var(--muted);max-width:760px;margin-bottom:24px}
+    .layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.95fr);gap:22px;align-items:start;margin-top:18px}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);backdrop-filter:blur(14px);padding:24px}
+    .group{margin-bottom:18px}
+    .group-title{font-weight:850;font-size:14px;color:#1c2b27;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+    .item{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(24,33,31,.08);cursor:pointer;user-select:none}
+    .item:last-child{border-bottom:0}
+    .item input{accent-color:var(--sage);width:18px;height:18px;margin-top:3px;flex-shrink:0;cursor:pointer}
+    .item .body{flex:1}
+    .item .title{font-weight:700;color:#33423e;font-size:15px;line-height:1.45}
+    .item .detail{color:var(--muted);font-size:13.5px;line-height:1.5;margin-top:3px}
+    .impact{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin-right:6px;vertical-align:middle}
+    .impact.high{background:rgba(184,90,78,.18);color:#7a3a30}
+    .impact.med{background:rgba(176,117,51,.2);color:#5e4419}
+    .impact.low{background:rgba(154,166,163,.25);color:#3d4744}
+    .score-card{display:flex;align-items:center;gap:16px;padding:20px;border-radius:18px;background:rgba(255,255,255,.65);border:1px solid var(--line);margin-bottom:18px}
+    .score-card .num{font-size:48px;font-weight:900;letter-spacing:-.03em;line-height:1}
+    .score-card .num.good{color:var(--good)}
+    .score-card .num.warn{color:var(--warn)}
+    .score-card .num.bad{color:var(--bad)}
+    .score-card .verdict{font-weight:800;font-size:16px}
+    .score-card .verdict small{display:block;font-weight:500;color:var(--muted);font-size:13px;margin-top:2px}
+    .fix-list h3{font-size:15px;color:#1c2b27;margin:0 0 8px}
+    .fix-list ol{margin:0;padding-left:20px}
+    .fix-list li{font-size:14px;line-height:1.55;color:#33423e;margin-bottom:8px}
+    .cta{display:grid;gap:12px;margin:20px 0 0 0;padding:18px;border-radius:18px;background:rgba(220,235,228,.62);border:1px solid rgba(142,169,155,.38)}
+    .cta strong{font-size:17px;letter-spacing:-.025em}
+    .cta-row{display:flex;gap:8px;flex-wrap:wrap}
+    footer{color:var(--muted);font-size:13px;margin-top:44px;text-align:center}
+    @media (max-width:860px){nav{align-items:flex-start;flex-direction:column}.layout{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand"><span class="mark" aria-hidden="true"></span><span>Local Lift Studio</span></a>
+      <div class="navlinks">
+        <a href="med-spa-google-business-profile-optimization-checklist.html">Full checklist guide</a>
+        <a href="review-reply-tone-analyzer.html">Tone analyzer</a>
+        <a class="button" href="https://localliftstudio.gumroad.com/l/dxppjd">$10 swipe file</a>
+        <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">$29 kit</a>
+      </div>
+    </nav>
+
+    <main>
+      <section>
+        <span class="eyebrow">Free tool - 20-point GBP scorer</span>
+        <h1>Score your Google Business Profile.</h1>
+        <p class="lead">Tick the boxes for what your med spa already has. The tool computes a weighted completeness score and orders the missing items by impact. Runs entirely in your browser; nothing leaves your device.</p>
+      </section>
+
+      <div class="layout">
+        <div class="panel" id="checklist-panel"></div>
+
+        <div class="panel">
+          <div id="results">
+            <div class="score-card"><div class="num warn" id="score">0/100</div><div class="verdict" id="verdict">Tick the boxes to see your score.<small id="subtext">Each item is weighted by ranking impact.</small></div></div>
+            <div class="fix-list">
+              <h3>Top missing items (ranked by impact)</h3>
+              <ol id="fixes"><li>Nothing ticked yet.</li></ol>
+            </div>
+            <div class="cta">
+              <strong>Profile gets you to the floor. Reviews are the engine.</strong>
+              <span>A fully-optimized profile with 8 reviews ranks below a partial profile with 80. The $29 Growth Kit gives you the review-request workflow that produces steady volume.</span>
+              <div class="cta-row">
+                <a class="button primary" href="https://localliftstudio.gumroad.com/l/qkpxfz">Get the $29 kit</a>
+                <a class="button" href="https://localliftstudio.gumroad.com/l/dxppjd">Or the $10 swipe file</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      Local Lift Studio - tools and templates for local businesses that want trustworthy reviews. Not legal or compliance advice.
+    </footer>
+  </div>
+
+  <script>
+  const CHECKLIST = [
+    {group: "Core identity",
+     items: [
+       {id:1,  w:8, impact:'high', title:"Primary category set correctly", detail:"'Medical Spa' if you offer injectables/prescription with a medical director; 'Beauty Salon' or 'Skin Care Clinic' otherwise."},
+       {id:2,  w:5, impact:'med', title:"3 to 5 secondary categories added", detail:"E.g., Skin Care Clinic, Laser Hair Removal Service, Massage Spa."},
+       {id:3,  w:5, impact:'med', title:"Business name matches signage exactly", detail:"No keyword-stuffing in the name; competitors can flag it."},
+       {id:4,  w:6, impact:'high', title:"NAP consistent across web (Google, Yelp, FB, Apple, site)", detail:"Name, address, phone matching exactly. Even 'St' vs 'Street' creates drag."}
+     ]
+    },
+    {group: "Service surface",
+     items: [
+       {id:5,  w:7, impact:'high', title:"25+ individual services listed", detail:"Each treatment as a separate Service item with short description."},
+       {id:6,  w:3, impact:'low', title:"Starting-at price ranges shown", detail:"'Starting at $300' beats exact prices; reduces price-objection no-shows."},
+       {id:7,  w:5, impact:'med', title:"Description (600-750 chars) with services + neighborhood", detail:"Natural language, mentions 2-3 top services and your city/area, no stuffing."}
+     ]
+    },
+    {group: "Visuals",
+     items: [
+       {id:8,  w:6, impact:'high', title:"20+ real photos uploaded", detail:"Real space, staff (with consent), products. No stock photos."},
+       {id:9,  w:3, impact:'low', title:"Photos geotagged before upload", detail:"Phone does this automatically when location is on. Compounds local signal."},
+       {id:10, w:4, impact:'med', title:"At least 1 new photo posted in last 30 days", detail:"Photo recency is a real freshness signal."},
+       {id:11, w:2, impact:'low', title:"No medical before-and-afters in main feed", detail:"Google can flag these. Keep on your website where you control disclosure."}
+     ]
+    },
+    {group: "Hours, attributes, Q&A",
+     items: [
+       {id:12, w:4, impact:'med', title:"Hours match reality + special-hours set for holidays", detail:"Wrong holiday hours generate negative reviews from walk-ups."},
+       {id:13, w:4, impact:'med', title:"All applicable attributes filled in", detail:"Women-owned, accessible, gift cards, Wi-Fi, etc. Most spas leave 25+ blank."},
+       {id:14, w:4, impact:'med', title:"Q&A seeded by owner (6-10 common Qs)", detail:"Otherwise random users post and you have less control over framing."}
+     ]
+    },
+    {group: "Activity signals",
+     items: [
+       {id:15, w:4, impact:'med', title:"Google Posts: at least 1 in last 7 days", detail:"Posts decay after a week. Weekly cadence keeps listing active."},
+       {id:16, w:7, impact:'high', title:"Replied to every review in last 90 days", detail:"Reply density is a small but consistent ranking signal."},
+       {id:17, w:3, impact:'low', title:"Description/services updated in last 90 days", detail:"Freshness compounds. A profile last edited 14 months ago reads as abandoned."}
+     ]
+    },
+    {group: "Review machinery",
+     items: [
+       {id:18, w:12, impact:'high', title:"Steady review-request workflow (3-6 new reviews/month)", detail:"Single biggest ranking lever an owner controls. Use the $29 Growth Kit to systematize."},
+       {id:19, w:5, impact:'med', title:"Reply templates ready before they are needed", detail:"Improvising under pressure is where HIPAA mistakes happen. The $10 swipe file has 35 templates."},
+       {id:20, w:3, impact:'low', title:"Tracking review velocity weekly", detail:"30-day gaps with zero new reviews is a freshness drop. Use the volume calculator on this site."}
+     ]
+    }
+  ];
+
+  function render(){
+    const panel = document.getElementById('checklist-panel');
+    let html = '';
+    CHECKLIST.forEach(group => {
+      html += '<div class="group"><div class="group-title">' + group.group + '</div>';
+      group.items.forEach(item => {
+        html += '<label class="item" for="cb' + item.id + '">'
+              + '<input type="checkbox" id="cb' + item.id + '" data-weight="' + item.w + '" data-id="' + item.id + '" onchange="recalc()">'
+              + '<div class="body"><div class="title"><span class="impact ' + item.impact + '">' + item.impact + '</span>' + item.title + '</div>'
+              + '<div class="detail">' + item.detail + '</div></div></label>';
+      });
+      html += '</div>';
+    });
+    panel.innerHTML = html;
+  }
+
+  function recalc(){
+    const cbs = document.querySelectorAll('#checklist-panel input[type=checkbox]');
+    let total = 0, scored = 0;
+    const missing = [];
+    cbs.forEach(cb => {
+      const w = parseInt(cb.dataset.weight, 10);
+      total += w;
+      if (cb.checked) scored += w;
+      else {
+        const id = parseInt(cb.dataset.id, 10);
+        for (const g of CHECKLIST){
+          const f = g.items.find(i => i.id === id);
+          if (f){ missing.push(Object.assign({}, f)); break; }
+        }
+      }
+    });
+    const pct = Math.round((scored / total) * 100);
+    const cls = pct >= 80 ? 'good' : pct >= 50 ? 'warn' : 'bad';
+    const verdict = pct >= 80 ? 'Strong profile.' : pct >= 50 ? 'Mid. The fixes below matter.' : 'Floor missing. Fix high-impact items first.';
+    const sub = pct >= 80 ? 'Now put the energy into a steady review-request workflow.' : pct >= 50 ? 'Profile is partway there; items below are weighted by ranking impact.' : 'A partial profile still ranks behind a fully-optimized competitor. Start with high-impact items.';
+    document.getElementById('score').textContent = pct + '/100';
+    document.getElementById('score').className = 'num ' + cls;
+    document.getElementById('verdict').firstChild.textContent = verdict;
+    document.getElementById('subtext').textContent = sub;
+
+    missing.sort((a,b) => b.w - a.w);
+    const fixes = document.getElementById('fixes');
+    if (missing.length === 0){
+      fixes.innerHTML = '<li>Everything checked. Now focus on review volume.</li>';
+    } else {
+      fixes.innerHTML = missing.slice(0, 6).map(m => '<li><strong>' + m.title + '</strong> <span style="color:var(--muted)">(impact ' + m.w + ')</span></li>').join('');
+    }
+  }
+
+  render();
+  recalc();
+  </script>
+</body>
+</html>
