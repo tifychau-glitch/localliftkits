@@ -93,10 +93,21 @@
           <textarea id="reply" placeholder="Example: Thank you for taking the time to share your feedback. We are sorry your experience did not meet expectations. Because patient privacy matters, we cannot discuss specifics publicly. Please contact us at hello@example.com so our team can learn more."></textarea>
           <div class="controls">
             <button class="button primary" onclick="analyze()">Analyze reply</button>
-            <button class="button" onclick="document.getElementById('reply').value='';document.getElementById('result').innerHTML='<div class=\'placeholder\'>Paste a draft and click Analyze.</div>';document.getElementById('highlight').innerHTML='';">Clear</button>
+            <button class="button" onclick="rewrite()">Generate clean version</button>
+            <button class="button" onclick="document.getElementById('reply').value='';document.getElementById('result').innerHTML='<div class=\'placeholder\'>Paste a draft and click Analyze.</div>';document.getElementById('highlight').innerHTML='';document.getElementById('rewrite').style.display='none';">Clear</button>
           </div>
           <label style="margin-top:18px">Original with flags highlighted</label>
           <div id="highlight" style="padding:14px;border-radius:14px;background:rgba(255,255,255,.55);border:1px solid var(--line);min-height:80px;font-size:14.5px;line-height:1.6;white-space:pre-wrap"></div>
+
+          <div id="rewrite" style="display:none;margin-top:18px">
+            <label>Clean replacement (HIPAA-safe, copy-ready)</label>
+            <div id="rewrite-text" style="padding:14px;border-radius:14px;background:rgba(220,235,228,.45);border:1px solid rgba(142,169,155,.45);font-size:15px;line-height:1.6;color:#33423e;white-space:pre-wrap"></div>
+            <div class="controls">
+              <button class="button" onclick="copyRewrite()">Copy to clipboard</button>
+              <span id="copy-confirm" style="color:var(--good);font-weight:700;font-size:13px;align-self:center;display:none">Copied.</span>
+            </div>
+            <p style="font-size:13px;color:var(--muted);margin-top:8px">Replace [Med Spa Name] and [phone or email] with your real values before posting.</p>
+          </div>
         </div>
 
         <div class="panel">
@@ -311,6 +322,38 @@
 
   function escapeHtml(s){
     return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  const TEMPLATES = {
+    positive: "Thank you for taking the time to share this. We are grateful for your kind words and for choosing [Med Spa Name]. We look forward to seeing you again.",
+    negative: "Thank you for sharing this feedback. We are sorry your experience did not meet expectations. Because privacy matters, we cannot discuss specifics publicly. Please reach out to us at [phone or email] so we can learn more.",
+    neutral: "Thank you for taking the time to leave feedback. We appreciate the chance to serve you. If you would like to share more, please contact us at [phone or email] and we will follow up."
+  };
+
+  function rewrite(){
+    const raw = (document.getElementById('reply').value || '').trim();
+    if (!raw){
+      document.getElementById('reply').focus();
+      return;
+    }
+    // Heuristic: pick template based on tone cues
+    const neg = /\b(disappoint|frustrat|upset|angry|terrible|awful|worst|bad|poor|unhappy|hate|rude|wait|long|expensive|overpriced|rushed|sorry|complaint)\b/i.test(raw);
+    const pos = /\b(love|amazing|fantastic|wonderful|great|excellent|highly recommend|beautiful|gorgeous|professional|kind|warm|welcoming|caring|attentive)\b/i.test(raw);
+    let key;
+    if (neg && !pos) key = 'negative';
+    else if (pos && !neg) key = 'positive';
+    else key = 'neutral';
+    document.getElementById('rewrite-text').textContent = TEMPLATES[key];
+    document.getElementById('rewrite').style.display = 'block';
+  }
+
+  function copyRewrite(){
+    const text = document.getElementById('rewrite-text').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const c = document.getElementById('copy-confirm');
+      c.style.display = 'inline';
+      setTimeout(() => { c.style.display = 'none'; }, 1800);
+    });
   }
   </script>
 </body>
