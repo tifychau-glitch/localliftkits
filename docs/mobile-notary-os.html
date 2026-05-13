@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobile Notary Operating System | Signing Log, Mileage, A/R, Tax Estimator + 12 Prep Checklists</title>
+  <meta name="description" content="A single workbook for solo NSAs. 8-tab tracker, 12 doc-prep checklists, invoice template, quarterly tax estimator. Validated by working notary signing agents on r/Notary.">
+  <link rel="canonical" href="https://tifychau-glitch.github.io/localliftkits/mobile-notary-os.html">
+  <meta property="og:title" content="Mobile Notary Operating System">
+  <meta property="og:description" content="Signing log, mileage, A/R, quarterly tax estimator, and 12 prep checklists in one workbook. Validated by working NSAs.">
+  <meta property="og:type" content="product">
+  <meta property="og:image" content="https://tifychau-glitch.github.io/localliftkits/assets/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Mobile Notary Operating System",
+    "description": "An 8-tab spreadsheet workbook plus 12 doc-prep checklists, invoice template, and setup guide for solo Notary Signing Agents. Tracks signings, mileage, A/R, scanback deadlines, and quarterly tax estimates.",
+    "image": "https://tifychau-glitch.github.io/localliftkits/assets/cover.png",
+    "brand": {"@type": "Brand", "name": "Local Lift Studio"},
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Standard Bundle",
+        "url": "https://localliftstudio.gumroad.com/",
+        "price": "24.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "White-Label Edition",
+        "url": "https://localliftstudio.gumroad.com/",
+        "price": "49.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --ink: #18211f;
+      --muted: #62716b;
+      --sage: #8ea99b;
+      --mint: #dcebe4;
+      --blush: #f4ddd8;
+      --cream: #fbf7ef;
+      --card: rgba(255,255,255,.80);
+      --line: rgba(24,33,31,.12);
+      --shadow: 0 24px 70px rgba(36,54,49,.14);
+      --notary-accent: #4b6b9d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 6%, rgba(244,221,216,.6), transparent 32%),
+        radial-gradient(circle at 92% 10%, rgba(220,235,228,.85), transparent 34%),
+        linear-gradient(135deg, #fbf7ef 0%, #f4f0e8 48%, #eef3f5 100%);
+      min-height: 100vh;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 22px 56px; }
+    nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 46px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 850; text-decoration: none; }
+    .mark { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--sage), #d9b7af); box-shadow: inset 0 0 0 7px rgba(255,255,255,.45); }
+    .navlinks { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .button, .navlinks a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; background: rgba(255,255,255,.62); font-weight: 750; font-size: 14px; }
+    .button.primary { background: var(--notary-accent); color: #fff; border-color: var(--notary-accent); box-shadow: 0 16px 34px rgba(75,107,157,.22); }
+    .button.dark { background: #1c2b27; color: #fff; border-color: #1c2b27; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr); gap: 34px; align-items: center; margin-bottom: 34px; }
+    .eyebrow { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,.65); border: 1px solid var(--line); color: #43564f; font-weight: 800; font-size: 13px; }
+    h1 { font-size: clamp(40px, 6vw, 68px); line-height: .96; letter-spacing: -.05em; margin: 20px 0 16px; }
+    .lead { font-size: 20px; line-height: 1.55; color: var(--muted); max-width: 720px; }
+    .hero-card, article, aside, .tier { background: var(--card); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow); backdrop-filter: blur(14px); }
+    .hero-card { padding: 18px; }
+    .hero-card .preview { display: block; width: 100%; aspect-ratio: 4/3; border-radius: 18px; border: 1px solid var(--line); background: linear-gradient(135deg, #eef3f5, #dcebe4); display: flex; align-items: center; justify-content: center; color: var(--notary-accent); font-weight: 800; font-size: 18px; letter-spacing: -.02em; }
+    .hero-card p { margin: 12px 4px 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 6px; }
+    .badge { padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.7); border: 1px solid var(--line); font-size: 12px; font-weight: 700; color: #43564f; }
+    .content { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 22px; align-items: start; }
+    article { padding: 28px; }
+    aside { padding: 20px; position: sticky; top: 18px; }
+    h2 { font-size: 30px; line-height: 1.08; letter-spacing: -.035em; margin: 34px 0 12px; }
+    h3 { font-size: 21px; margin: 24px 0 8px; }
+    p, li { color: var(--muted); font-size: 17px; line-height: 1.65; }
+    ul, ol { padding-left: 22px; }
+    .pain { display: grid; gap: 10px; margin: 18px 0 24px; }
+    .pain div { padding: 14px 16px; border-radius: 14px; background: rgba(255,255,255,.6); border: 1px solid var(--line); color: #2b3a35; }
+    .feature-grid { display: grid; gap: 12px; margin: 18px 0 26px; }
+    .feature { padding: 16px 18px; border-radius: 16px; border: 1px solid var(--line); background: rgba(255,255,255,.72); }
+    .feature strong { display: block; color: #243631; font-size: 17px; margin-bottom: 4px; }
+    .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 26px 0; }
+    .tier { padding: 24px; display: flex; flex-direction: column; }
+    .tier h3 { margin-top: 0; }
+    .tier .price { font-size: 38px; font-weight: 850; letter-spacing: -.04em; color: var(--ink); margin: 6px 0 4px; }
+    .tier .price-note { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+    .tier ul { padding-left: 18px; margin: 8px 0 16px; }
+    .tier li { font-size: 15px; line-height: 1.5; margin-bottom: 4px; }
+    .tier .button { width: 100%; text-align: center; margin-top: auto; }
+    .lead-magnet { padding: 22px; border-radius: 22px; background: rgba(220,235,228,.6); border: 1px solid rgba(142,169,155,.38); margin: 26px 0; }
+    .lead-magnet strong { font-size: 20px; letter-spacing: -.025em; display: block; margin-bottom: 6px; }
+    .validation { padding: 18px; border-radius: 18px; background: rgba(255,255,255,.66); border: 1px solid var(--line); margin: 22px 0; }
+    .validation em { font-style: normal; color: #2b3a35; font-weight: 700; }
+    .disclaimer { padding: 16px; border-radius: 16px; background: rgba(244,221,216,.4); border: 1px solid rgba(217,183,175,.45); color: #4a5d57; line-height: 1.55; font-size: 14px; margin: 24px 0; }
+    .side-list { display: grid; gap: 10px; margin-top: 14px; }
+    .side-list a { display: block; text-decoration: none; border: 1px solid var(--line); border-radius: 16px; padding: 12px; background: rgba(255,255,255,.64); font-weight: 750; color: #253530; font-size: 15px; }
+    footer { color: var(--muted); font-size: 13px; margin-top: 44px; text-align: center; }
+    @media (max-width: 860px) {
+      nav { align-items: flex-start; flex-direction: column; }
+      .hero, .content, .tiers { grid-template-columns: 1fr; }
+      aside { position: static; }
+      h1 { font-size: 42px; }
+      article { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Local Lift Studio home"><span class="mark"></span><span>Local Lift Studio</span></a>
+      <div class="navlinks">
+        <a href="#whats-inside">What's inside</a>
+        <a href="#tiers">Pricing</a>
+        <a class="button primary" href="https://localliftstudio.gumroad.com/">Get the bundle, $24</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">For solo Notary Signing Agents</span>
+          <h1>One workbook. Every signing, every mile, every invoice, every Q4 tax estimate.</h1>
+          <p class="lead">You're already running 4 to 7 separate sheets and notebooks. This is the system that pulls all of it into one place. Built by a non-NSA, corrected by working NSAs on r/Notary before launch.</p>
+          <div class="badges">
+            <span class="badge">8-tab workbook</span>
+            <span class="badge">12 prep checklists</span>
+            <span class="badge">Excel + Google Sheets</span>
+            <span class="badge">Instant download</span>
+          </div>
+          <p><a class="button primary" href="https://localliftstudio.gumroad.com/">Get the $24 bundle</a> <a class="button" href="#free-prep-card">Free: download the Refi prep card</a></p>
+        </div>
+        <div class="hero-card">
+          <div class="preview">Mobile Notary OS: 8 tabs, 12 PDFs</div>
+          <p>Workbook with Dashboard, Signing Log, Mileage, A/R, Quarterly Tax, Scanback Tracker, Companies Directory, and Settings, all connected by formulas so changes propagate.</p>
+        </div>
+      </section>
+
+      <div class="content">
+        <article>
+          <h2>The pain we solve</h2>
+          <p>You signed up to notarize loan docs. You did not sign up to be a part-time bookkeeper, mileage logger, A/R clerk, scanback dispatcher, and quarterly-tax estimator. But you are all of those things, because if you stop being any of them, the money stops working.</p>
+          <div class="pain">
+            <div>You have a signing log on your phone, a mileage notebook in the glovebox, and a separate doc for who owes you what.</div>
+            <div>There's a sticky note on the dash for tomorrow's scanback deadline.</div>
+            <div>Every January you scramble to add it all up for taxes.</div>
+            <div>You looked at NotaryGadget at $10 a month and didn't want one more subscription.</div>
+          </div>
+
+          <h2 id="whats-inside">What's inside</h2>
+
+          <h3>1. Spreadsheet workbook (.xlsx, opens in Sheets)</h3>
+          <div class="feature-grid">
+            <div class="feature"><strong>Dashboard</strong>Auto-summary of signings this month, gross fees, miles driven, mileage deduction at the current IRS rate, unpaid invoices total, oldest unpaid, doc-type breakdown.</div>
+            <div class="feature"><strong>Signing Log</strong>One row per signing. Date, signer, doc type, hiring company, fee, miles, scanback due, paid status. Dropdowns pre-filled.</div>
+            <div class="feature"><strong>Mileage</strong>Pulls from the signing log. Calculates deductible value at the 2026 IRS business rate ($0.70/mi). Monthly and YTD.</div>
+            <div class="feature"><strong>A/R by Company</strong>Who owes you what, days outstanding on the oldest unpaid, and auto-flags anything past 30 days.</div>
+            <div class="feature"><strong>Quarterly Tax Estimator</strong>Runs gross fees + mileage deduction + flat expense estimate through SE tax + your income bracket. Outputs Q1-Q4 estimated payments. Not tax advice, just a starting point for your CPA conversation.</div>
+            <div class="feature"><strong>Scanback Tracker</strong>Color-coded urgency (red &lt;24h, yellow &lt;72h). Drops off the list once you mark it complete.</div>
+            <div class="feature"><strong>Companies Directory</strong>Your private notes on each hiring company. Payment terms, scheduler email, fee schedule, "always pays in 7", "uses SnapDocs", etc.</div>
+            <div class="feature"><strong>Settings</strong>One place to change your default fee, mileage rate, tax bracket, and business name. Everything else updates automatically.</div>
+          </div>
+
+          <h3>2. Twelve doc-prep checklists (PDF, printable)</h3>
+          <p>One single-page card per package type, covering what's typically in the package, common pitfalls, scanback expectations, and what NOT to notarize.</p>
+          <ul>
+            <li>Refinance (Conventional)</li>
+            <li>Purchase (Buyer)</li>
+            <li>Purchase (Seller)</li>
+            <li>HELOC</li>
+            <li>Reverse Mortgage</li>
+            <li>Loan Modification</li>
+            <li>Cash-Out Refi</li>
+            <li>Construction Loan</li>
+            <li>VA Loan (Buyer)</li>
+            <li>FHA Loan (Buyer)</li>
+            <li>Hybrid eClose</li>
+            <li>Power of Attorney</li>
+          </ul>
+
+          <h3>3. Invoice template (Excel)</h3>
+          <p>Pre-formatted for per-signing fee, mileage reimbursement, additional fees, and total. Drop in your logo and you're done.</p>
+
+          <h3>4. Setup guide (PDF, 2 pages)</h3>
+          <p>How to copy the file into Google Drive, customize the Settings tab, and start logging signings inside 60 seconds.</p>
+
+          <div class="validation">
+            <em>Validated by working NSAs on r/Notary.</em> Before launch, the lead magnet went up on r/Notary asking for corrections. Two working signing agents, one a title-company NSA and one a working RTC-handler, flagged real issues. Both corrections were integrated into the refi checklist and lead magnet before the bundle shipped. This isn't a generic template churned out by someone who's never sat at a signing table.
+          </div>
+
+          <div class="lead-magnet" id="free-prep-card">
+            <strong>Free: the Refi Quick Reference card</strong>
+            <span>The same one we posted to r/Notary for review. Single-page PDF, printable, covers RTC handling (corrected per Vegas-Patriot's feedback), signer-question referral rules (corrected per apjolex's feedback), and the most common refi-package pitfalls.</span>
+            <p style="margin-top: 14px;"><a class="button dark" href="assets/Refi_Quick_Reference.pdf">Download the free Refi Quick Reference (PDF)</a></p>
+          </div>
+
+          <h2 id="tiers">Two ways to buy</h2>
+          <div class="tiers">
+            <div class="tier">
+              <h3>Standard bundle</h3>
+              <div class="price">$24</div>
+              <div class="price-note">One-time. Instant download.</div>
+              <ul>
+                <li>8-tab workbook (.xlsx)</li>
+                <li>12 prep checklist PDFs</li>
+                <li>Editable invoice template</li>
+                <li>2-page setup guide</li>
+                <li>Free updates when IRS mileage rate changes</li>
+              </ul>
+              <a class="button primary" href="https://localliftstudio.gumroad.com/">Get the standard bundle</a>
+            </div>
+            <div class="tier">
+              <h3>White-label edition</h3>
+              <div class="price">$49</div>
+              <div class="price-note">Personalized with your business branding. Delivered within 24h.</div>
+              <ul>
+                <li>Everything in the standard bundle</li>
+                <li>Your business name throughout</li>
+                <li>Your logo on workbook header + invoice</li>
+                <li>Your brand color applied to header banners</li>
+                <li>Your contact info on invoice + welcome PDF</li>
+                <li>Branding and layout only, never legal or state or compliance content</li>
+              </ul>
+              <a class="button dark" href="https://localliftstudio.gumroad.com/">Get the white-label edition</a>
+            </div>
+          </div>
+
+          <h2>Who this is for</h2>
+          <p>NSAs in years 1 to 5 doing 20 to 100 signings a month who are stitching free templates together and want one system they own. Solo or small-team operators who do not want a $10/mo subscription to a notary CRM.</p>
+
+          <h2>Who this is not for</h2>
+          <ul>
+            <li>Brand-new notaries looking for "how to become an NSA" content. Different product, different audience.</li>
+            <li>High-volume agencies already running NotaryGadget or SnapDocs at scale.</li>
+            <li>NSAs who want state-by-state legal references inside the bundle. Not what this is.</li>
+          </ul>
+
+          <div class="disclaimer">
+            <strong>Not legal advice.</strong> This bundle is operational tooling, not legal or tax advice. Notary regulations vary by state. Consult your state's Secretary of State or commissioning authority for state-specific rules. Consult a CPA for tax filings. The Quarterly Tax Estimator gives you a starting point for that conversation, not a filing-ready number.
+          </div>
+        </article>
+
+        <aside>
+          <strong>Resources</strong>
+          <div class="side-list">
+            <a href="assets/Refi_Quick_Reference.pdf">Free: Refi Quick Reference PDF</a>
+            <a href="https://localliftstudio.gumroad.com/">Get the $24 bundle</a>
+            <a href="https://localliftstudio.gumroad.com/">Get the $49 white-label</a>
+            <a href="index.html">Local Lift Studio home</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>Local Lift Studio - Operational tooling for small businesses. Built by Tiffany Chau with an AI agent named Harry. Not legal advice.</footer>
+  </div>
+  <script data-goatcounter="https://localliftkits.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
