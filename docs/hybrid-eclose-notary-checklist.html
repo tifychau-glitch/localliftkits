@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hybrid eClose Signing Checklist for Notary Signing Agents (2026)</title>
+  <meta name="description" content="A working signing agent's prep guide for hybrid eClose loan packages: what is wet versus eSigned, scanback urgency, common pitfalls, and the questions borrowers always ask.">
+  <link rel="canonical" href="https://tifychau-glitch.github.io/localliftkits/hybrid-eclose-notary-checklist.html">
+  <meta property="og:title" content="Hybrid eClose Signing Checklist for Notary Signing Agents">
+  <meta property="og:description" content="What is wet versus eSigned in a hybrid package, scanback expectations, common pitfalls, and how to answer the questions borrowers always ask.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://tifychau-glitch.github.io/localliftkits/assets/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Hybrid eClose Signing Prep",
+    "description": "Steps a notary signing agent should run through before a hybrid eClose appointment.",
+    "totalTime": "PT10M",
+    "step": [
+      {"@type": "HowToStep", "position": 1, "name": "Confirm the hybrid split", "text": "Call or message the title company before the appointment and confirm exactly which documents are wet-signed and which are eSigned. Hybrid splits vary by lender."},
+      {"@type": "HowToStep", "position": 2, "name": "Verify the eSign portion is complete", "text": "The eSign portal may still be open when you arrive. Verify with the title company that the eSign portion is complete before signing the wet docs."},
+      {"@type": "HowToStep", "position": 3, "name": "Set the expectation on arrival", "text": "Borrowers often think they finished everything in the portal. Tell them up front there is still a 15 to 30 minute wet-sign portion for documents that cannot be eSigned in most states."},
+      {"@type": "HowToStep", "position": 4, "name": "Check Note format", "text": "Confirm whether the Note is wet or eSigned. If it was eSigned, do NOT have the borrower sign a paper Note also. Confirm which version is in the wet package."},
+      {"@type": "HowToStep", "position": 5, "name": "Run the wet-sign portion", "text": "Notarize only the documents that have a notarial certificate already printed: typically the Deed of Trust, Signature Affidavit, Occupancy Affidavit, and Compliance Agreement. Handle RTC handoff if this is a refi."},
+      {"@type": "HowToStep", "position": 6, "name": "Scan back fast", "text": "Hybrid eCloses often have tighter scanback windows than full wet closings, sometimes 30 to 60 minutes. Confirm the scanback list before leaving the table."}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a hybrid eClose?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A hybrid eClose is a loan signing where most documents are eSigned in advance through a borrower portal, and only the documents that legally require a wet ink signature and a notarial seal are completed at the table with a notary signing agent. The wet portion typically runs 20 to 40 minutes versus 45 to 75 minutes for a full wet close."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why is the notary still needed if most documents are eSigned?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most US states do not yet accept eNotarization for the documents that require a notarial certificate, like the Deed of Trust or Mortgage. A notary signing agent handles the wet-sign portion in person while the rest of the package is completed digitally."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can borrowers sign a paper Note if the package has an eNote?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. If the Note was eSigned, the borrower should NOT also sign a paper Note. Confirm with the title company which version is in the wet package before having the borrower sign anything Note-related. Double signing creates a legal mismatch."}
+      },
+      {
+        "@type": "Question",
+        "name": "How fast is the scanback on a hybrid eClose?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Faster than a full wet close. Often 30 to 60 minutes from signing. The eSign portion of the package is already complete, so funding waits only on the wet pieces and the lender wants them processed quickly."}
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the wet-sign portion of a hybrid eClose actually take?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Typically 20 to 40 minutes at the table. Around 15 to 40 signatures and 5 to 20 initials on 20 to 60 pages. Smaller than a full wet close but the same notarial requirements apply, so attention to detail is the same."}
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --ink: #18211f;
+      --muted: #62716b;
+      --sage: #8ea99b;
+      --mint: #dcebe4;
+      --blush: #f4ddd8;
+      --cream: #fbf7ef;
+      --card: rgba(255,255,255,.80);
+      --line: rgba(24,33,31,.12);
+      --shadow: 0 24px 70px rgba(36,54,49,.14);
+      --notary-accent: #4b6b9d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 6%, rgba(244,221,216,.6), transparent 32%),
+        radial-gradient(circle at 92% 10%, rgba(220,235,228,.85), transparent 34%),
+        linear-gradient(135deg, #fbf7ef 0%, #f4f0e8 48%, #eef3f5 100%);
+      min-height: 100vh;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 22px 56px; }
+    nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 46px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 850; text-decoration: none; }
+    .mark { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--sage), #d9b7af); box-shadow: inset 0 0 0 7px rgba(255,255,255,.45); }
+    .navlinks { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .button, .navlinks a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; background: rgba(255,255,255,.62); font-weight: 750; font-size: 14px; }
+    .button.primary { background: var(--notary-accent); color: #fff; border-color: var(--notary-accent); box-shadow: 0 16px 34px rgba(75,107,157,.22); }
+    .button.dark { background: #1c2b27; color: #fff; border-color: #1c2b27; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr); gap: 34px; align-items: center; margin-bottom: 34px; }
+    .eyebrow { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,.65); border: 1px solid var(--line); color: #43564f; font-weight: 800; font-size: 13px; }
+    h1 { font-size: clamp(36px, 5.5vw, 60px); line-height: .98; letter-spacing: -.04em; margin: 20px 0 16px; }
+    .lead { font-size: 19px; line-height: 1.55; color: var(--muted); max-width: 720px; }
+    .hero-card, article, aside { background: var(--card); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow); backdrop-filter: blur(14px); }
+    .hero-card { padding: 18px; }
+    .hero-card .preview { display: block; width: 100%; aspect-ratio: 4/3; border-radius: 18px; border: 1px solid var(--line); background: linear-gradient(135deg, #eef3f5, #dcebe4); display: flex; align-items: center; justify-content: center; color: var(--notary-accent); font-weight: 800; font-size: 18px; letter-spacing: -.02em; text-align: center; padding: 10px; }
+    .hero-card p { margin: 12px 4px 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .content { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 22px; align-items: start; }
+    article { padding: 28px; }
+    aside { padding: 20px; position: sticky; top: 18px; }
+    h2 { font-size: 28px; line-height: 1.1; letter-spacing: -.03em; margin: 34px 0 12px; }
+    h3 { font-size: 20px; margin: 24px 0 8px; }
+    p, li { color: var(--muted); font-size: 17px; line-height: 1.65; }
+    ul, ol { padding-left: 22px; }
+    .checklist { display: grid; gap: 12px; margin: 18px 0; }
+    .step { padding: 18px; border-radius: 18px; border: 1px solid var(--line); background: rgba(255,255,255,.72); }
+    .step strong { display: block; color: #243631; font-size: 17px; margin-bottom: 6px; }
+    .note { padding: 16px; border-radius: 18px; background: rgba(244,221,216,.45); border: 1px solid rgba(217,183,175,.45); color: #4a5d57; line-height: 1.55; }
+    .cta { display: grid; gap: 12px; margin: 24px 0; padding: 20px; border-radius: 22px; background: rgba(220,235,228,.62); border: 1px solid rgba(142,169,155,.38); }
+    .cta strong { font-size: 20px; letter-spacing: -.025em; }
+    .lead-magnet { padding: 22px; border-radius: 22px; background: rgba(255,255,255,.72); border: 1px solid var(--line); margin: 22px 0; }
+    .lead-magnet strong { font-size: 18px; letter-spacing: -.02em; display: block; margin-bottom: 6px; color: var(--ink); }
+    .disclaimer { padding: 14px; border-radius: 16px; background: rgba(244,221,216,.4); border: 1px solid rgba(217,183,175,.45); color: #4a5d57; line-height: 1.55; font-size: 14px; margin: 24px 0; }
+    .side-list { display: grid; gap: 10px; margin-top: 14px; }
+    .side-list a { display: block; text-decoration: none; border: 1px solid var(--line); border-radius: 16px; padding: 12px; background: rgba(255,255,255,.64); font-weight: 750; color: #253530; font-size: 15px; }
+    footer { color: var(--muted); font-size: 13px; margin-top: 44px; text-align: center; }
+    @media (max-width: 860px) {
+      nav { align-items: flex-start; flex-direction: column; }
+      .hero, .content { grid-template-columns: 1fr; }
+      aside { position: static; }
+      h1 { font-size: 38px; }
+      article { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Local Lift Studio home"><span class="mark"></span><span>Local Lift Studio</span></a>
+      <div class="navlinks">
+        <a href="mobile-notary-os.html">For notaries</a>
+        <a class="button primary" href="https://localliftstudio.gumroad.com/l/plfue?utm_source=lp&utm_medium=eclose_article_nav">Get the bundle, $24</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">For Notary Signing Agents</span>
+          <h1>Hybrid eClose signing checklist.</h1>
+          <p class="lead">Most of the package is already eSigned in the borrower portal. You handle the wet-sign and the notarized pieces. Smaller package, tighter scanback, same attention to detail. Here is the prep card we use.</p>
+        </div>
+        <div class="hero-card">
+          <div class="preview">Hybrid eClose. Wet portion only. 20 to 40 minutes.</div>
+          <p>Smaller package than a full wet close, but the notarial requirements are the same. Common pitfall: the eSign portal is not complete when you arrive.</p>
+        </div>
+      </section>
+
+      <div class="content">
+        <article>
+          <p>A hybrid eClose splits the loan package into two halves. Most documents get eSigned by the borrower in a portal in the days before closing. The notary handles only the wet-sign and notarized portion at the table, typically 20 to 40 minutes.</p>
+          <p>The wet portion is small but the variables shift. Different lenders draw the wet line in different places. Scanback windows are tighter. Borrowers walk in thinking they already finished. Here is what to check before, during, and after.</p>
+
+          <div class="note"><strong>Not legal advice.</strong> eClose practices and state notarial requirements vary. Consult your state's commissioning authority for eNotarization rules in your jurisdiction and your hiring title company for package-specific instructions.</div>
+
+          <h2>What is typically in the wet portion</h2>
+          <p>The wet split varies by lender. The standard set of wet-signed documents in a hybrid refi or purchase usually includes:</p>
+          <ul>
+            <li>Deed of Trust or Mortgage. Notarized.</li>
+            <li>Note. Often wet-signed, occasionally an eNote.</li>
+            <li>Signature and Name Affidavit. Notarized.</li>
+            <li>Occupancy Affidavit. Notarized.</li>
+            <li>Compliance Agreement. Notarized.</li>
+            <li>Notice of Right to Cancel if this is a refi. Each borrower signs two copies that go back to the title company in the scanback or overnight package, and each borrower keeps two UNSIGNED copies for their records.</li>
+            <li>Patriot Act and Borrower ID Verification.</li>
+            <li>State-required wet-sign documents.</li>
+            <li>Closing Disclosure acknowledgment. Sometimes wet, often pre-signed in the portal.</li>
+          </ul>
+
+          <h2>Common pitfalls</h2>
+          <div class="checklist">
+            <div class="step"><strong>Confirm the hybrid split before the appointment.</strong> Call or message the title company and confirm exactly which documents are wet versus eSigned. Lenders are not consistent. The CD might be eSigned at one lender and wet at the next.</div>
+            <div class="step"><strong>Verify the eSign portion is complete.</strong> Before signing the wet docs, confirm with the title company that the borrower finished the eSign portal. A half-finished portal blocks funding even if your wet portion is perfect.</div>
+            <div class="step"><strong>Reset borrower expectations on arrival.</strong> Borrowers often think they already finished everything in the portal. Tell them up front: there is still a 15 to 30 minute wet-sign portion for documents that cannot be eSigned in most states.</div>
+            <div class="step"><strong>Check Note format BEFORE the borrower signs.</strong> If the Note was eSigned in the portal, do NOT have the borrower also sign a paper Note. Two signed Notes create a legal mismatch. Confirm with the title company which version is in the wet package.</div>
+            <div class="step"><strong>Same RTC rule as a full wet refi.</strong> Each borrower signs two RTC copies that go back to title. Each borrower keeps two UNSIGNED copies. The hybrid format does not change this.</div>
+            <div class="step"><strong>Smaller package, same scanback urgency.</strong> Fewer pages means less time at the table, but the title company still wants the wet pieces back fast. Often 30 to 60 minutes after signing.</div>
+          </div>
+
+          <h2>Scanback expectations</h2>
+          <p>Hybrid eClose scanbacks are usually faster than full wet closes because the eSign portion is already complete and funding waits only on the wet pieces. Plan to scan from the car or a nearby location with reliable upload. Originals overnight via the prepaid label by the next business day. Confirm the scanback list with the title company before leaving the table; do not assume the standard set covers their request.</p>
+
+          <h2>Common signer questions</h2>
+          <ul>
+            <li>"I already signed everything online, why are you here?" The notarized documents cannot be eSigned in most states. Brief explanation, then move on.</li>
+            <li>"When do I get my money? When does the deal record?" Refer to the Loan Officer and the title company. Do not quote specific funding or recording dates.</li>
+            <li>"Is this legal?" Yes. Hybrid eClose is a standard format used by most major lenders.</li>
+            <li>"Why are we even doing this in person?" State law on notarial certificates. Polite, brief answer, then keep moving.</li>
+          </ul>
+
+          <h2>Do NOT notarize</h2>
+          <ul>
+            <li>eSigned documents. They are already complete in the portal.</li>
+            <li>The Closing Disclosure.</li>
+            <li>The Note unless the package specifies a wet Note.</li>
+            <li>The Notice of Right to Cancel.</li>
+            <li>Lender or settlement agent instructions.</li>
+            <li>Any informational acknowledgment without a notarial certificate already printed.</li>
+          </ul>
+
+          <h2>Quick stats for a typical hybrid eClose</h2>
+          <ul>
+            <li>Signatures: 15 to 40 (wet portion only).</li>
+            <li>Initials: 5 to 20 (wet portion only).</li>
+            <li>Pages: 20 to 60 (wet portion only).</li>
+            <li>Duration at the table: 20 to 40 minutes.</li>
+          </ul>
+
+          <div class="lead-magnet">
+            <strong>Free: download our Refi Quick Reference PDF.</strong>
+            <span>Covers RTC handling and signer-question referrals for a standard refi. Useful even for hybrid refis since the wet portion shares the same rules. Posted to r/Notary for review before launch, two corrections from working NSAs integrated.</span>
+            <p style="margin-top: 14px;"><a class="button dark" href="assets/Refi_Quick_Reference.pdf">Download the free Refi Quick Reference (PDF)</a></p>
+          </div>
+
+          <h2>Want this for every doc type</h2>
+          <p>The full Mobile Notary Operating System bundle has prep checklists for all 12 common package types, including hybrid eClose, refinance, purchase, HELOC, reverse, loan mod, cash-out, construction, VA, FHA, and power of attorney. Plus an 8-tab workbook for tracking signings, mileage, A/R, scanback deadlines, and quarterly tax estimates in one place.</p>
+
+          <div class="cta">
+            <strong>Get the full bundle, $24.</strong>
+            <span>One workbook, 12 prep checklists, invoice template, setup guide. Validated by working NSAs on r/Notary before launch.</span>
+            <a class="button primary" href="https://localliftstudio.gumroad.com/l/plfue?utm_source=lp&utm_medium=eclose_article_cta">Get the bundle on Gumroad</a>
+          </div>
+        </article>
+
+        <aside>
+          <strong>For working NSAs</strong>
+          <div class="side-list">
+            <a href="refinance-signing-checklist-notary.html">Refinance signing prep checklist</a>
+            <a href="assets/Refi_Quick_Reference.pdf">Free: Refi Quick Reference PDF</a>
+            <a href="mobile-notary-os.html">Mobile Notary Operating System</a>
+            <a href="https://localliftstudio.gumroad.com/l/plfue?utm_source=lp&utm_medium=eclose_article_sidebar">Get the bundle, $24</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>Local Lift Studio. Operational tooling for small businesses. Not legal advice. Notary regulations vary by state.</footer>
+  </div>
+  <script data-goatcounter="https://localliftkits.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
